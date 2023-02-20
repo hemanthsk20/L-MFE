@@ -1,0 +1,46 @@
+<div class="form-container">
+    <h2>Edit {{newsTitle}}</h2>
+    <form [formGroup]="editNewsForm" #form="ngForm">
+        <div class="form-fields-wrapper">
+            <mat-form-field appearance="fill">
+                <!-- <mat-label>Name : </mat-label> -->
+                <span>News Title:</span>
+                <input matInput type="text" placeholder="News Title" formControlName="newstitle" />
+                <button *ngIf="editNewsForm.value.newstitle" class="button-reset" matSuffix mat-icon-button aria-label="Clear" (click)="resetInput('newstitle')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-error>Enter Name</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>App ID:</span>
+                <input matInput type="text" placeholder="App ID" formControlName="appid" [formControl]="appIdCtrl"
+                    readonly />
+                <mat-error>Enter App Id</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="example-chip-list">
+                <span>Languages:</span>
+                <mat-select class="mat-languages" formControlName="language_names"  [(value)]="selected">
+                    <mat-option *ngFor="let language of allLanguages" [value]="language">{{language}}</mat-option>
+                </mat-select>
+                <button *ngIf="editNewsForm.value.language_names" class="button-reset" matSuffix mat-icon-button aria-label="Clear" (click)="resetInput('language_names')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-error>Select Language</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="textarea-field">
+                <span>News Body:</span>
+                <textarea matInput placeholder="News Body*" formControlName="body"></textarea>
+                <mat-error>Enter News Body</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="line"></div>
+        <div class="button-wrapper">
+            <button class="button-secondary">
+                <span class="button-label" style="text-align: center;">Cancel</span></button>
+            <button class="button-primary" [disabled]="!editNewsForm.valid" (click)="updateNews()">
+                <span class="button-label" style="text-align: center;">Save</span>
+                <span class="btn-arrow" slot="icon">→</span>
+            </button>
+        </div>
+    </form>
+</div>

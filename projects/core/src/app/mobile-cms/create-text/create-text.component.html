@@ -1,0 +1,32 @@
+<div class="form-container">
+    <h2>Create Text</h2>
+    <form [formGroup]="createTextForm" #form="ngForm">
+        <div class="form-fields-wrapper">
+            <mat-form-field appearance="fill">
+                <span>Text Tite:</span>
+                <input matInput type="text" placeholder="Name" formControlName="texttitle" />
+                <mat-error>Enter Text Title</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>App ID:</span>
+                <input matInput type="text" placeholder="App ID" formControlName="appid" [formControl]="appIdCtrl" readonly/>
+                <mat-error>Enter App Id</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="example-chip-list">
+                <span>Body:</span>
+                <textarea matInput placeholder="Body*" formControlName="body"></textarea>
+                <mat-error>Enter Body</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="line"></div>
+        <div class="button-wrapper">
+            <button class="button-secondary">
+                <span class="button-label" style="text-align: center;">Cancel</span></button>
+            <button class="button-primary" [disabled]="!createTextForm.valid" (click)="createText()">
+                <span class="button-label" style="text-align: center;">Save</span>
+                <span class="btn-arrow" slot="icon">→</span>
+            </button>
+        </div>
+    </form>
+</div>
+

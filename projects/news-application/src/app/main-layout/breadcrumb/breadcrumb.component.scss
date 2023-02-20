@@ -1,0 +1,52 @@
+.breadcrumb{
+    list-style: none;
+    li {
+        // display: flex;
+        // align-items: center;
+        display: inline-flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: -moz-fit-content;
+        width: fit-content;
+        height: 24px;
+        margin: 0 0 12px;
+        a{
+            font-size: 12px;
+            font-family: var(--font-liebherr-text-regular);
+            font-weight: 700;
+            letter-spacing: var(--letter-spacing-basic);
+            color: var(--color-steel-800);
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-right: 12px;
+            margin-left: 12px;
+        }
+        i{
+            font-size: 24px;
+            color: var(--color-black);
+            font-weight: normal;
+        }
+    }
+}
+.xng-breadcrumb{
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    margin: 0 0 12px; 
+}
+.material-icons {
+    font-family: "Material Icons" !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+  }

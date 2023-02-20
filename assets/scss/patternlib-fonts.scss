@@ -1,0 +1,28 @@
+@font-face {
+  font-family: LiebherrText-Regular;
+  src: url("../fonts/LiebherrText-Regular_Web.ttf") format("truetype");
+}
+@font-face {
+  font-family: LiebherrText-Bold;
+  src: url("../fonts/LiebherrText-Bold_Web.ttf") format("truetype");
+}
+@font-face {
+  font-family: LiebherrHead-Black;
+  src: url("../fonts/LiebherrHead-Black_Web.ttf") format("truetype");
+}
+@font-face {
+  font-family: LiebherrHead-Regular;
+  src: url("../fonts/LiebherrHead-Regular_Web.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Liebherr-Icons";
+  src:  url('../fonts/Liebherr_Iconfont.eot');
+  src: /*url("../fonts/Liebherr-Icons.ttf") format("truetype");*/
+  url('../fonts/Liebherr_Iconfont.eot') format('embedded-opentype'),
+  url('../fonts/Liebherr_Iconfont.ttf') format('truetype'),
+  url('../fonts/Liebherr_Iconfont.woff') format('woff'),
+  url('../fonts/Liebherr_Iconfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

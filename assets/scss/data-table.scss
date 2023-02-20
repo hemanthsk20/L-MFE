@@ -1,0 +1,73 @@
+.table-container{
+    width: 100%;
+}
+::ng-deep .ngx-table{
+    font-family: var(--font-liebherr-text-regular);
+    font-size: var(--table-body-text-size);
+}
+::ng-deep .ngx-pagination-range-dropdown-button {
+    color: #50596c;
+    border: 1px solid red;
+    cursor: pointer;
+    padding: 4px;
+}
+.table-top {
+    align-items: center;
+    background-color: $color-steel-100;
+    color: $color-black;
+    display: flex;
+    font-family: var(--table-header-font-family);
+    font-size: var(--table-header-text-size);
+    font-weight: 900;
+    height: 70px;
+    justify-content: space-between;
+    border-top: 0 solid $color-steel-300;
+    padding: 0px 20px;
+    h4{
+        font-size: var(--table-header-text-size);
+        margin: 0;     
+    }
+}
+::ng-deep .ngx-table__table--normal > thead > tr > th{
+    border-bottom: 1px solid $color-steel-300;
+    border-left: 0 solid $color-steel-300;
+    border-right: 1px solid $color-steel-300;
+    border-top: 1px solid $color-steel-300;
+    font-size: var(--table-head-text-size);
+    overflow-wrap: break-word;
+    text-align: left;
+    background-color: $color-steel-100;
+    box-sizing: border-box;
+    color: $color-black;
+    height: 50px;
+    padding: 6px 14px 4px 20px;
+    cursor: pointer;
+}
+::ng-deep .ngx-container{
+    border: 1px solid $color-steel-300
+}
+::ng-deep .ngx-table__table--normal {
+	>tbody {
+		>tr {
+			>td {
+                border-bottom: 1px solid $color-steel-300;
+                border-left: 0 solid $color-steel-300;
+                border-right: 1px solid $color-steel-300;
+                border-top: 1px solid $color-steel-300;
+                font-size: var(--table-head-text-size);
+                font-weight: 300;
+                overflow-wrap: break-word;
+                text-align: left;
+                background-color: var(--color-white);
+                box-sizing: border-box;
+                color: $color-black;
+                height: 50px;
+                padding: 6px 14px 4px 20px;
+                cursor: pointer;
+			}
+		}
+	}
+}
+::ng-deep .ngx-table__table--hoverable > tbody tr:hover td {
+    background: $color-steel-100;
+}

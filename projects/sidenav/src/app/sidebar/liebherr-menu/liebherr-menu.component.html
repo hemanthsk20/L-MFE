@@ -1,0 +1,133 @@
+<nav class="sidebar-container" [ngClass]="minimizeSidebar ? 'minimize' : ''">
+    <ul class="sidebar-items">
+        <li (click)="onClick(1)" [ngClass]="{'active': tab==='tab1'}">
+            <a>
+                <div class="sidebar-icon">
+                    <i class="icon-liebherr-user-icon-rgb-64px"></i>
+                </div>
+                <span class="nav-text">
+                    Personal Data
+                </span>
+            </a>
+
+        </li>
+        <li (click)="onClick(2)" [ngClass]="{'active': tab==='tab2'}">
+            <a>
+                <div class="sidebar-icon">
+                    <i class="icon-liebherr-plus-icon-rgb-64px"></i>
+                </div>
+                <span class="nav-text">
+                    my colleagues
+                </span>
+            </a>
+
+        </li>
+        <li (click)="onClick(3)" [ngClass]="{'active': tab==='tab3'}">
+            <a>
+                <div class="sidebar-icon">
+                    <i class="icon-liebherr-contacts-icon-rgb-64px"></i>
+                </div>
+                <span class="nav-text">
+                    address book
+                </span>
+            </a>
+
+        </li>
+        <li (click)="onClick(4)" [ngClass]="{'active': tab==='tab4'}">
+            <a>
+                <div class="sidebar-icon">
+                    <i class="icon-liebherr-onboarding-icon-rgb-64px"></i>
+                </div>
+                <span class="nav-text">
+                    business relations
+                </span>
+            </a>
+
+        </li>
+        <li (click)="onClick(5)" [ngClass]="{'active': tab==='tab5'}">
+            <a>
+                <div class="sidebar-icon">
+                    <i class="icon-liebherr-products-icon-rgb-64px"></i>
+                </div>
+                <span class="nav-text">
+                    my products
+                </span>
+            </a>
+        </li>
+        <li (click)="onClick(6)" [ngClass]="{'active': tab==='tab6'}">
+            <a>
+                <div class="sidebar-icon">
+                    <i class="icon-liebherr-shopping-cart-icon-rgb-64px"></i>
+                </div>
+                <span class="nav-text">
+                    my orders
+                </span>
+            </a>
+        </li>
+        <li (click)="onClick(7)" [ngClass]="{'active': tab==='tab7'}">
+            <a>
+                <div class="sidebar-icon">
+                    <i class="icon-liebherr-envelope-icon-rgb-64px"></i>
+                </div>
+                <span class="nav-text">
+                    my messages
+                </span>
+            </a>
+        </li>
+        <li (click)="onClick(8);toggleSubmenu(togglemenu);" [ngClass]="{'active': tab==='tab8'}">
+            <a>
+                <div class="sidebar-icon">
+                    <i class="icon-liebherr-plus-icon-rgb-64px"></i>
+                </div>
+                <span class="nav-text">
+                    Option 5
+                    <span class="expand-subitems-icon">
+                        <i
+                            [ngClass]="showSubmenu ? 'icon-liebherr-arrow-up-icon-rgb-64px' : 'icon-liebherr-arrow-down-icon-rgb-64px'"></i>
+                    </span>
+                </span>
+            </a>
+            <ul class="has-subnav" *ngIf="showSubmenu">
+                <li>
+                    <a>
+                        <div class="sidebar-icon">
+                            <i class="icon-liebherr-plus-icon-rgb-64px"></i>
+                        </div>
+                        <span class="nav-text">
+                            Option 5
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="sidebar-icon">
+                            <i class="icon-liebherr-plus-icon-rgb-64px"></i>
+                        </div>
+                        <span class="nav-text">
+                            Option 5
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <ul class="sidebar-items">
+        <!-- <li>
+            <a (click)="clickEvent()">
+                <div class="sidebar-icon">
+                    <i class="icon-liebherr-arrow-left-icon-rgb-64px"></i>
+                </div>
+            </a>
+        </li> -->
+        <li class="sidebar-minimize">
+            <a (click)="clickEvent()">
+                <div class="sidebar-icon">
+                    <i *ngIf="!minimizeSidebar" class="icon-liebherr-arrow-left-icon-rgb-64px"></i>
+                    <i *ngIf="minimizeSidebar" class="icon-liebherr-arrow-right-icon-rgb-64px"></i>
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>

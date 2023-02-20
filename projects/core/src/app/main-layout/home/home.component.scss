@@ -1,0 +1,40 @@
+@import "../../../../../dashboard/src/app/sample/data-table/data-table.component.scss";
+@import "../../../../../../assets/scss/mixins";
+.liebherr-home {
+    display: grid;
+    // grid-template-columns: 280px 1fr;
+    grid-template-columns: auto 1fr;
+    @include mobile{
+        grid-template-columns: auto auto;
+    }
+}
+app-header {
+    grid-column: span 2;
+    position: relative;
+    z-index: 1;
+ }
+.sidenav{
+    min-height: 100vh
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--color-steel-100);
+    // position: relative;
+    // z-index: -1;
+}
+.cms-wrapper {
+    font-family: LiebherrText-Regular;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: auto;
+    // margin: 40px 0px 0px;
+    margin: 0;
+    // padding: 2.5em 7.1875em 7.1875em;
+    padding: 2.5em 3.1875em 3.1875em;
+    width: auto;
+}

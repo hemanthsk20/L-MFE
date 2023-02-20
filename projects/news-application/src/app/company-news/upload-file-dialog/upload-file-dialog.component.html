@@ -1,0 +1,62 @@
+
+<div class="modal-close">
+    <mat-icon mat-button mat-dialog-close>close</mat-icon>
+</div>
+<h2 mat-dialog-title>Add Document</h2>
+<mat-dialog-content class="mat-typography">
+  <p class="title-description">Add an invoice, a delivery note or other document to this order.</p>
+<div class="tabset">
+    <input type="radio" name="tabset_1" id="tabset_1_description" hidden="" aria-hidden="true" checked="">
+    <input type="radio" name="tabset_1" id="tabset_1_statistics" hidden="" aria-hidden="true">
+    <!-- <input type="radio" name="tabset_1" id="tabset_1_reviews" hidden="" aria-hidden="true">
+    <input type="radio" name="tabset_1" id="tabset_1_contact" hidden="" aria-hidden="true"> -->
+    <ul hidden="" aria-hidden="true">
+        <li><label for="tabset_1_description">File</label></li>
+        <li><label for="tabset_1_statistics">Link</label></li>
+        <!-- <li><label for="tabset_1_reviews">Reviews</label></li>
+        <li><label for="tabset_1_contact">Contact</label></li> -->
+    </ul>
+    <div>
+        <section>
+            <div class="custom-file">
+                
+                <input  type="file"
+                name="file-input"
+                id="file-input"
+                class="file-input__input" (change)="onChange($event)">
+                <i class="icon-liebherr-upload-icon-rgb-64px"></i>
+                <label class="file-input__label" for="file-input">
+                    <span>Choose file</span>
+                </label>
+                <span>Maximum size 5MB</span>
+        </div>
+        </section>
+        <section>
+           <form class="form-container">
+            <mat-form-field [formGroup]="fileUploadForm" appearance="fill">
+                <span>Link:</span>
+                <input matInput type="text" placeholder="Paste Link here" formControlName="link" />
+                <mat-error>Enter Link</mat-error>
+            </mat-form-field>
+           </form>
+        </section>
+        <!-- <section>
+            <h2>Reviews</h2>
+            <p>
+                Donec non nunc ac augue ornare aliquam. Aenean sed volutpat arcu. Sed molestie lacus placerat nisl gravida condimentum.
+            </p>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>
+                Nullam nec condimentum lacus. Integer dapibus velit nec ipsum varius, a pharetra arcu imperdiet. Donec pretium libero a tincidunt vulputate. Mauris feugiat tempor lectus, quis placerat mi congue sit amet.
+            </p>
+        </section> -->
+    </div>
+<!-- .tabset -->
+</div>
+  </mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <!-- <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button> -->
+</mat-dialog-actions>

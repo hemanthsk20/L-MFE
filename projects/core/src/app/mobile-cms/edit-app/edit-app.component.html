@@ -1,0 +1,295 @@
+<div class="form-container" *ngIf="!showNews">
+    <h2>Update {{appName}} Application</h2>
+    <form [formGroup]="editAppForm" #form="ngForm">
+        <div class="form-fields-wrapper">
+            <mat-form-field appearance="fill">
+                <!-- <mat-label>Name : </mat-label> -->
+                <span>Name:</span>
+                <input matInput type="text" placeholder="Name" formControlName="name" />
+                <button *ngIf="editAppForm.value.name" class="button-reset" matSuffix mat-icon-button aria-label="Clear" (click)="resetInput('name')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-error>Enter Name</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>Division:</span>
+                <input matInput type="text" placeholder="Division" formControlName="division" />
+                <button *ngIf="editAppForm.value.division" class="button-reset" matSuffix mat-icon-button aria-label="Clear" (click)="resetInput('division')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-error>Enter Division</mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-chip-list" appearance="fill">
+                <span>Languages</span>
+                <mat-chip-list #chipList aria-label="Language selection">
+                    <mat-chip *ngFor="let language of languages" (removed)="remove(language)">
+                        {{language}}
+                        <button matChipRemove>
+                            <mat-icon>cancel</mat-icon>
+                        </button>
+                    </mat-chip>
+                    <input id="mat-chip" placeholder="Language..." #languageInput [formControl]="languageCtrl"
+                        formControlName="language_names" [matAutocomplete]="auto" [matChipInputFor]="chipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="updateChips($event)">
+                </mat-chip-list>
+                <button *ngIf="editAppForm.value.language_names" class="button-chip-reset" matSuffix mat-icon-button aria-label="Clear" (click)="clear()">
+                  <mat-icon>close</mat-icon>
+              </button>
+                <mat-error>Select language</mat-error>
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                    <mat-option *ngFor="let language of filteredLanguages | async" [value]="language">
+                        {{language}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>Email:</span>
+                <input matInput type="email" placeholder="Email" formControlName="email" />
+                <button *ngIf="editAppForm.value.email" class="button-reset" matSuffix mat-icon-button aria-label="Clear" (click)="resetInput('email')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-error>Enter Email</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>Website:</span>
+                <input matInput type="text" placeholder="Web Page" formControlName="website" />
+                <button *ngIf="editAppForm.value.website" class="button-reset" matSuffix mat-icon-button aria-label="Clear" (click)="resetInput('website')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-error>Enter Website</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>Phone:</span>
+                <input matInput type="number" placeholder="Phone " formControlName="phone" />
+                <button *ngIf="editAppForm.value.phone" class="button-reset" matSuffix mat-icon-button aria-label="Clear" (click)="resetInput('phone')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-error>Enter Phone Number</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>Fax:</span>
+                <input matInput type="number" placeholder="Fax" formControlName="fax" />
+                <button *ngIf="editAppForm.value.fax" class="button-reset" matSuffix mat-icon-button aria-label="Clear" (click)="resetInput('fax')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-error>Enter Fax</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>Responsibility Information:</span>
+                <textarea matInput placeholder="Responsibility Information*"
+                    formControlName="responsibility_information"></textarea>
+                <mat-error>Enter Responsibility Information</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>Hrd Information:</span>
+                <textarea matInput placeholder="Hrd Information*" formControlName="hrb_information"></textarea>
+                <mat-error>Enter Hrd Information</mat-error>
+            </mat-form-field>
+        </div>
+        <!-- <div class="line"></div> -->
+
+        <div class="line"></div>
+        <div class="button-wrapper">
+            <button class="button-secondary">
+                <span class="button-label" style="text-align: center;">Cancel</span></button>
+            <button class="button-primary" [disabled]="!editAppForm.valid" (click)="editCmsApp()">
+                <span class="button-label" style="text-align: center;">Save</span>
+                <span class="btn-arrow" slot="icon">→</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+
+<div class="sub-table-container" *ngIf="!showNews">
+  <h1>News List</h1>
+    <div class="grid-container">
+      <!-- <div class="grid-item">
+        <h1>News List</h1>
+      </div> -->
+      <div class="grid-item">
+  
+      </div>
+      <form class="grid-item">
+        <div class="searchbox">
+          <label></label>
+          <div class="searchbox-input-container">
+            <input class="searchbox-input-default" id="globalSearch"
+            (input)="onNewsChange($event)" type="input" placeholder="Search">
+            <span class="searchbox-icon">
+              <i class="icon-liebherr-search-icon-rgb-64px"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+      <div class="grid-item">
+        <button class="button button-primary" (click)="addNews()" >
+          <span class="button-label" style="text-align: center;">Add New</span>
+        </button>
+      </div>
+    </div>
+    <ngx-table [configuration]="configuration" [data]="data" #table [columns]="newscolumns" [pagination]="pagination">
+    </ngx-table>
+    <mat-paginator [length]="paginationTotalItems" [pageSize]="10" (page)="paginationNewsEvent($event)">
+    </mat-paginator>
+  </div>
+  
+  <ng-template #levelHeaderActionTemplate>
+    <div class="sorting-template">
+      <div class="level-template">
+        <label class="form-checkbox position">
+          <!-- <input
+            type="checkbox"
+            [checked]="selectedLevels.has('ASC')"
+            (change)="eventEmitted([{ key: 'name', order: 'asc' }], 1)"
+          /> 
+          <em class="form-icon"></em> -->
+          Sort Ascending
+        </label>
+        <label class="form-checkbox position">
+          <!-- <input
+            type="checkbox"
+            [checked]="selectedLevels.has('DESC')"
+            (change)="eventEmitted([{ key: 'name', order: 'desc' }], 1)"
+          /> 
+          <em class="form-icon"></em> -->
+          Sort Descending
+        </label>
+        <label class="form-checkbox position">
+          <!-- <input
+            type="checkbox"
+            [checked]="selectedLevels.has('RESET')"
+            (change)="eventEmitted([{ key: 'name', order: 'reset' }], 1)"
+          />
+          <em class="form-icon"></em>  -->
+          Reset
+        </label>
+        <!-- <label class="form-checkbox position"> Sort Ascending </label>
+        <label class="form-checkbox position"> Sort Descending </label>
+        <label class="form-checkbox position"> Reset </label> -->
+      </div>
+    </div>
+  </ng-template>
+  <!-- <ng-template #nameTpl let-row let-rowIndex="rowIndex">
+    <div *ngIf="editRow !== rowIndex">{{ row.name }}</div>
+    <div *ngIf="editRow === rowIndex">
+      <input type="text" #name placeholder="Name" class="form-label" [value]="row.name" />
+    </div>
+  </ng-template> -->
+  
+  <ng-template #actionTpl let-row let-rowIndex="rowIndex">
+    <div class="cell-actions">
+      <i  class="icon-liebherr-edit-icon-rgb-64px" (click)="editNewsById(row)"></i>
+      <i  class="icon-liebherr-bin-icon-rgb-64px" (click)="deleteNews(row)"></i>
+    </div>
+  </ng-template>
+  <!-- <ng-template #actionTpl1 let-row let-rowIndex="rowIndex">
+    <div class="cell-actions">
+      <i  class="icon-liebherr-bin-icon-rgb-64px"></i>
+    </div>
+  </ng-template> -->
+  <!-- <ng-template #companyHeaderActionTemplate>
+    <div class="search-template">
+      <label for="filterHeaderSearch"> Search </label>
+      <input class="form-input" id="filterHeaderSearch" [value]="selectedCompany" (input)="filter('company', $event)"
+        type="search" placeholder="Search" />
+    </div>
+  </ng-template> -->
+
+
+
+  <!-- Text table  -->
+  <div class="sub-table-container" *ngIf="!showNews">
+    <h1>Texts List</h1>
+    <div class="grid-container">
+      <div class="grid-item">
+  
+      </div>
+      <form class="grid-item">
+        <div class="searchbox">
+          <label></label>
+          <div class="searchbox-input-container">
+            <input class="searchbox-input-default" id="globalSearch"
+            (input)="onTextChange($event)" type="input" placeholder="Search">
+            <span class="searchbox-icon">
+              <i class="icon-liebherr-search-icon-rgb-64px"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+      <div class="grid-item">
+        <button class="button button-primary" (click)="addNewText()">
+          <span class="button-label" style="text-align: center;">Add New</span>
+        </button>
+      </div>
+    </div>
+    <ngx-table [configuration]="configuration"  #table [columns]="textscolumns" [pagination]="pagination"  (event)="texteventEmitted($event)"> <!--[data]="data"-->
+    </ngx-table>
+    <mat-paginator [length]="paginationTotalItems" [pageSize]="10" (page)="  paginationTextEvent($event)">
+    </mat-paginator>
+  </div>
+  
+  <ng-template #levelHeaderActionTemplate>
+    <div class="sorting-template">
+      <div class="level-template">
+        <label class="form-checkbox position">
+          <!-- <input
+            type="checkbox"
+            [checked]="selectedLevels.has('ASC')"
+            (change)="eventEmitted([{ key: 'name', order: 'asc' }], 1)"
+          /> 
+          <em class="form-icon"></em> -->
+          Sort Ascending
+        </label>
+        <label class="form-checkbox position">
+          <!-- <input
+            type="checkbox"
+            [checked]="selectedLevels.has('DESC')"
+            (change)="eventEmitted([{ key: 'name', order: 'desc' }], 1)"
+          /> 
+          <em class="form-icon"></em> -->
+          Sort Descending
+        </label>
+        <label class="form-checkbox position">
+          <!-- <input
+            type="checkbox"
+            [checked]="selectedLevels.has('RESET')"
+            (change)="eventEmitted([{ key: 'name', order: 'reset' }], 1)"
+          />
+          <em class="form-icon"></em>  -->
+          Reset
+        </label>
+        <!-- <label class="form-checkbox position"> Sort Ascending </label>
+        <label class="form-checkbox position"> Sort Descending </label>
+        <label class="form-checkbox position"> Reset </label> -->
+      </div>
+    </div>
+  </ng-template>
+  <!-- <ng-template #nameTpl let-row let-rowIndex="rowIndex">
+    <div *ngIf="editRow !== rowIndex">{{ row.name }}</div>
+    <div *ngIf="editRow === rowIndex">
+      <input type="text" #name placeholder="Name" class="form-label" [value]="row.name" />
+    </div>
+  </ng-template> -->
+  
+  <ng-template #actionTpl let-row let-rowIndex="rowIndex">
+    <div class="cell-actions">
+      <i  class="icon-liebherr-edit-icon-rgb-64px"></i>
+      <!-- <i  class="icon-liebherr-bin-icon-rgb-64px" (click)="deleteApp()"></i> -->
+    </div>
+  </ng-template>
+  <ng-template #actionTpl1 let-row let-rowIndex="rowIndex">
+    <div class="cell-actions">
+      <i  class="icon-liebherr-bin-icon-rgb-64px"></i>
+    </div>
+  </ng-template>
+  <!-- <ng-template #companyHeaderActionTemplate>
+    <div class="search-template">
+      <label for="filterHeaderSearch"> Search </label>
+      <input class="form-input" id="filterHeaderSearch" [value]="selectedCompany" (input)="filter('company', $event)"
+        type="search" placeholder="Search" />
+    </div>
+  </ng-template> -->
+  <div *ngIf="showNews">
+  <router-outlet></router-outlet>
+  </div>

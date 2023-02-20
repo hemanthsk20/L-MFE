@@ -1,0 +1,78 @@
+<div class="form-container">
+    <h2>Create News</h2>
+    <form [formGroup]="createNewsForm" #form="ngForm">
+        <div class="form-fields-wrapper">
+            <mat-form-field appearance="fill">
+                <!-- <mat-label>Name : </mat-label> -->
+                <span>News Tite:</span>
+                <input matInput type="text" placeholder="Name" formControlName="newstitle" />
+                <mat-error>Enter News Title</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <span>App ID:</span>
+                <input matInput type="text" placeholder="App ID" formControlName="appid" [formControl]="appIdCtrl" readonly/>
+                <mat-error>Enter App Id</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="example-chip-list">
+                <span>Languages:</span>
+                <mat-select  formControlName="language_names"> 
+                    <mat-option *ngFor="let language of allLanguages" [value]="language">{{language}}</mat-option>
+                </mat-select>
+                <mat-error>Slect Language</mat-error>
+            </mat-form-field>
+            <!-- <mat-form-field class="example-chip-list" appearance="fill">
+                <span>Languages</span>
+                <mat-chip-list #chipList aria-label="Language selection">
+                    <mat-chip *ngFor="let language of languages" (removed)="remove(language)">
+                        {{language}}
+                        <button matChipRemove>
+                            <mat-icon>cancel</mat-icon>
+                        </button>
+                    </mat-chip>
+                    <input id="mat-chip" placeholder="Language..." #languageInput [formControl]="languageCtrl"
+                        formControlName="language_names" [matAutocomplete]="auto" [matChipInputFor]="chipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)">
+                </mat-chip-list>
+                <mat-error>Select language</mat-error>
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                    <mat-option *ngFor="let language of filteredLanguages | async" [value]="language">
+                        {{language}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field> -->
+            <mat-form-field appearance="fill" class="example-chip-list">
+                <span>Body:</span>
+                <textarea matInput placeholder="Body*" formControlName="body"></textarea>
+                <mat-error>Enter Body</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="line"></div>
+        <div class="button-wrapper">
+            <button class="button-secondary">
+                <span class="button-label" style="text-align: center;">Cancel</span></button>
+            <button class="button-primary" [disabled]="!createNewsForm.valid" (click)="createNews()">
+                <span class="button-label" style="text-align: center;">Save</span>
+                <span class="btn-arrow" slot="icon">→</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- <mat-form-field appearance="fill">
+        <input matInput type="text" placeholder="Languages" formControlName="languages" />
+    </mat-form-field> -->
+<!-- <mat-form-field appearance="fill">
+        <span>Languages:</span>
+        <mat-select>
+          <mat-option value="language">language</mat-option>
+        </mat-select>
+        <mat-error>Slect Language</mat-error>
+    </mat-form-field> -->
+<!-- <mat-form-field appearance="fill">
+                <span>Languages:</span>
+                <mat-select formControlName="languages" multiple>
+                    [formControl]="languages"
+                    <mat-option *ngFor="let language of languageList" [value]="language">{{language}}</mat-option>
+                </mat-select>
+                <mat-error>Slect Language</mat-error>
+</mat-form-field> -->

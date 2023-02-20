@@ -1,0 +1,6379 @@
+
+@charset "UTF-8";
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Primary type */
+/* Secondary type */
+/* Loading indicator */
+@import '../scss/_variables.scss';
+@keyframes indeterminate {
+	0% {
+		left: -100%;
+		width: 100%;
+	}
+	100% {
+		left: 100%;
+		width: 10%;
+	}
+}
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selected */
+@keyframes draw {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+@keyframes rotationOuter {
+	0% {
+		transform: rotate(0deg);
+	}
+	30% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+@keyframes rotationInner {
+	0% {
+		transform: rotate(0deg);
+	}
+	15% {
+		transform: rotate(0deg);
+	}
+	90% {
+		transform: rotate(-359deg);
+	}
+	100% {
+		transform: rotate(-359deg);
+	}
+}
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+/* Theme variants */
+/* Fallback if no theme is selcted */
+.patternlib-accordion-host {
+	display: block;
+}
+.patternlib-accordion-item-wrapper {
+	border-top: 1px solid;
+	border-color: var(--color-steel-500);
+	font-family: var(--font-liebherr-text-regular);
+	font-size: var(--size-font-copy-regular);
+	transition: 0.2s ease-in;
+	&:last-child {
+		border-bottom: 1px solid;
+		border-color: var(--color-steel-500);
+	}
+	.patternlib-accordion-item {
+		width: 100%;
+		height: 80px;
+		background-color: var(--color-white);
+		color: var(--color-black);
+		padding: 0;
+		border: none;
+		outline: none;
+		font-family: var(--font-liebherr-text-bold);
+		font-size: var(--size-font-copy-bold);
+		cursor: pointer;
+		&:disabled {
+			cursor: default;
+			color: var(--color-steel-400);
+		}
+	}
+	.patternlib-accordion-panel {
+		background-color: var(--color-white);
+		overflow: hidden;
+		overflow-y: auto;
+	}
+}
+.patternlib-alert-message-host {
+	display: block;
+}
+.patternlib-alert-message-text {
+	font-size: var(--size-font-copy-regular-small);
+	font-family: var(--font-liebherr-text-regular);
+}
+.patternlib-alert-message-success {
+	color: var(--color-success);
+}
+.patternlib-alert-message-error {
+	color: var(--color-warning);
+}
+.patternlib-avatar-host {
+	display: block;
+}
+.patternlib-avatar-host.corporate-theme {
+	--avatar-background-color: var(--color-yellow);
+	--avatar-text-color: var(--color-black);
+}
+.patternlib-avatar-host.hau-theme {
+	--avatar-background-color: var(--color-blue);
+	--avatar-text-color: var(--color-white);
+}
+.patternlib-avatar-wrapper {
+	box-sizing: border-box;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.patternlib-avatar {
+	background: var(--color-steel-100);
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	left: 0px;
+	top: 0px;
+	line-height: 26px;
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+	&:hover {
+		&:not(.no-states) {
+			background: var(--color-steel-200);
+			cursor: pointer;
+		}
+	}
+	&:active {
+		&:not(.no-states) {
+			background: var(--avatar-background-color, var(--color-yellow));
+			color: var(--avatar-text-color, var(--color-black)) !important;
+		}
+	}
+	.patternlib-avatar-label {
+		margin: auto;
+		font-family: var(--font-liebherr-text-bold);
+		font-size: var(--size-font-copy-bold);
+		color: var(--color-black);
+		letter-spacing: var(--letter-spacing-basic);
+	}
+}
+.patternlib-badge-host {
+	display: inline-block;
+}
+.patternlib-badge-host.corporate-theme {
+	--badge-background-color: var(--color-yellow);
+	--badge-font-color: var(--color-black);
+}
+.patternlib-badge-host.hau-theme {
+	--badge-background-color: var(--color-blue);
+	--badge-font-color: var(--color-white);
+}
+.patternlib-badge-wrapper {
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	text-align: center;
+	justify-content: flex-start;
+	align-items: flex-end;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	height: 50px;
+	&:hover {
+		&:not(.no-states) {
+			cursor: pointer;
+			.icon {
+				* {
+					color: var(--color-steel-600) !important;
+				}
+			}
+		}
+	}
+	&:active {
+		&:not(.no-states) {
+			.icon {
+				* {
+					color: var(--color-black) !important;
+				}
+			}
+		}
+	}
+}
+.patternlib-badge {
+	position: absolute;
+	border-radius: 99px;
+	background-color: var(--badge-background-color, var(--color-yellow));
+	color: var(--badge-font-color, var(--color-black)) !important;
+	font-family: var(--font-liebherr-text-bold);
+	font-size: var(--size-font-copy-bold-small);
+	line-height: 24px;
+	height: 26px;
+	min-width: 20px;
+	right: 0px;
+}
+.patternlib-breadcrumb-item-host {
+	display: block;
+}
+.patternlib-breadcrumb-host {
+	display: inline-block;
+}
+.patternlib-breadcrumb-host.corporate-theme {
+	--breadcrumb-item-button-background-color-whilehover: var(--color-clay-light);
+	--breadcrumb-item-button-border-color-whilehover: var(--color-clay-light);
+	--breadcrumb-item-button-text-color-whilehover: var(--color-black);
+}
+.patternlib-breadcrumb-host.hau-theme {
+	--breadcrumb-item-button-background-color-whilehover: var(--color-artic-blue);
+	--breadcrumb-item-button-border-color-whilehover: var(--color-artic-blue);
+	--breadcrumb-item-button-text-color-whilehover: var(--color-white);
+}
+.patternlib-breadcrumb-wrapper {
+	display: inline-flex;
+	position: relative;
+	.patternlib-breadcrumb-item-wrapper {
+		display: inline-flex;
+		align-items: center;
+		box-sizing: border-box;
+		width: fit-content;
+		height: 24px;
+		.patternlib-breadcrumb-item-label {
+			font-size: var(--size-font-copy-regular-smaller);
+			font-family: var(--font-liebherr-text-regular);
+			font-weight: 700;
+			letter-spacing: var(--letter-spacing-basic);
+			color: var(--color-steel-800);
+			text-decoration: none;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+		.patternlib-breadcrumb-item-label-last-item {
+			color: var(--color-black);
+			font-family: var(--font-liebherr-text-bold);
+		}
+	}
+}
+
+.patternlib-breadcrumb-wrapper 
+.patternlib-breadcrumb-item-wrapper 
+.patternlib-breadcrumb-item-button:hover:not(
+.patternlib-breadcrumb-item-button-active) {
+  background-color: var(--breadcrumb-item-button-background-color-whileHover, var(--color-clay-light));
+  border-color: var(--breadcrumb-item-button-border-color-whileHover, var(--color-clay-light));
+}
+
+.patternlib-breadcrumb-wrapper 
+.patternlib-breadcrumb-item-wrapper 
+.patternlib-breadcrumb-item-button:hover:not(
+.patternlib-breadcrumb-item-button-active) * {
+  color: var(--breadcrumb-item-button-text-color-whileHover, var(--color-black));
+}
+
+.patternlib-breadcrumb-wrapper 
+.patternlib-breadcrumb-item-wrapper 
+.patternlib-breadcrumb-item-button * {
+  color: var(--color-black);
+}
+
+.patternlib-breadcrumb-wrapper 
+.patternlib-breadcrumb-item-wrapper 
+.patternlib-breadcrumb-item-button:active:not(
+.patternlib-breadcrumb-item-button-active) {
+  border-color: var(--color-steel-500) !important;
+}
+
+.patternlib-breadcrumb-wrapper 
+.patternlib-breadcrumb-item-wrapper 
+.patternlib-breadcrumb-item-button-active {
+  border-color: var(--color-black);
+  background-color: var(--color-black);
+}
+
+.patternlib-breadcrumb-wrapper 
+.patternlib-breadcrumb-item-wrapper 
+.patternlib-breadcrumb-item-button-active * {
+  color: var(--color-white);
+}
+.patternlib-button-host.corporate-theme {
+	--button-background-color-primary: var(--color-yellow);
+	--button-background-color-whilehover-primary: var(--color-clay-light);
+	--button-text-color-primary: var(--color-font-base);
+	--button-icon-color-primary: var(--color-black);
+	--button-text-color-secondary: var(--color-font-base);
+	--button-text-color-whilehover-secondary: var(--color-clay);
+	--button-icon-color-secondary: var(--color-black);
+	--button-icon-color-whilehover-secondary: var(--color-clay);
+	--button-border-color-whilehover-secondary: var(--color-clay);
+	--loading-indicator-background-color: var(--color-black);
+	--loading-indicator-background-color-secondary: var(--color-black);
+}
+.patternlib-button-host.hau-theme {
+	--button-background-color-primary: var(--color-blue);
+	--button-background-color-whilehover-primary: var(--color-artic-blue);
+	--button-text-color-primary: var(--color-white);
+	--button-icon-color-primary: var(--color-white);
+	--button-text-color-secondary: var(--color-artic-blue);
+	--button-text-color-whilehover-secondary: var(--color-blue);
+	--button-icon-color-secondary: var(--color-artic-blue);
+	--button-icon-color-whilehover-secondary: var(--color-blue);
+	--button-border-color-whilehover-secondary: var(--color-blue);
+	--loading-indicator-background-color: var(--color-white);
+	--loading-indicator-background-color-secondary: var(--color-artic-blue);
+}
+.patternlib-button {
+	box-sizing: border-box;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border-radius: 0px;
+	border: none;
+	font-family: var(--font-liebherr-text-bold);
+	font-size: var(--size-font-copy-bold-smaller);
+	font-weight: 700;
+	letter-spacing: var(--letter-spacing-basic);
+	line-height: 1.1;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	&:focus {
+		outline: 0;
+	}
+	.patternlib-button-layout {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	.patternlib-button-label {
+		width: 100%;
+	}
+	.patternlib-button-icon-padding-right {
+		padding-right: 16px;
+	}
+	.patternlib-button-icon-padding-left {
+		padding-left: 16px;
+	}
+}
+.patternlib-button.no-states {
+	cursor: default !important;
+}
+.patternlib-button.small {
+	height: 42px;
+}
+.patternlib-button.big {
+	height: 52px;
+}
+.patternlib-button.giant {
+	height: 76px;
+}
+.patternlib-button.primary {
+	background-color: var(--button-background-color-primary, var(--color-yellow));
+	color: var(--button-text-color-primary, var(--color-font-base));
+	.icon {
+		* {
+			color: var(--button-icon-color-primary, var(--color-black)) !important;
+		}
+	}
+	&:hover {
+		&:not(.no-states) {
+			background-color: var(--button-background-color-whileHover-primary, var(--color-clay-light));
+		}
+	}
+	&:active {
+		&:not(.no-states) {
+			color: var(--color-white);
+			background-color: var(--color-black);
+			.icon {
+				* {
+					color: var(--color-white) !important;
+				}
+			}
+		}
+	}
+}
+.patternlib-button.primary.disabled {
+	pointer-events: none;
+	color: var(--color-steel-400);
+	background-color: var(--color-steel-100);
+	.icon {
+		* {
+			color: var(--color-steel-400) !important;
+		}
+	}
+}
+.patternlib-button.secondary {
+	color: var(--button-text-color-secondary, var(--color-font-base));
+	background: none;
+	border: 1px solid;
+	border-color: var(--color-artic-blue);
+	.icon {
+		* {
+			color: var(--button-icon-color-secondary, var(--color-black)) !important;
+		}
+	}
+	&:hover {
+		&:not(.no-states) {
+			color: var(--button-text-color-whileHover-secondary, var(--color-clay));
+			border-color: var(--button-border-color-whileHover-secondary, var(--color-clay));
+			.icon {
+				* {
+					color: var(--button-icon-color-whileHover-secondary, var(--color-clay)) !important;
+				}
+			}
+		}
+	}
+	&:active {
+		&:not(.no-states) {
+			color: var(--color-font-base);
+			border-color: var(--color-black);
+			background-color: var(--color-white);
+			.icon {
+				* {
+					color: var(--color-black) !important;
+				}
+			}
+		}
+	}
+}
+.patternlib-button.secondary.disabled {
+	pointer-events: none;
+	color: var(--color-steel-400);
+	border-color: var(--color-steel-300);
+	.icon {
+		* {
+			color: var(--color-steel-400) !important;
+		}
+	}
+}
+.loading-indicator {
+	background: inherit;
+	position: relative;
+	.loading-indicator-wrapper {
+		position: absolute;
+		width: 100%;
+		top: -4px;
+		height: 4px;
+		overflow: hidden;
+		&:not(.secondary) {
+			.indeterminate {
+				position: absolute;
+				height: 100%;
+				background-color: var(--loading-indicator-background-color, var(--color-black));
+				animation: indeterminate 1.5s infinite ease-out;
+			}
+		}
+		.indeterminate {
+			position: absolute;
+			height: 100%;
+			background-color: var(--loading-indicator-background-color-secondary, var(--color-black));
+			animation: indeterminate 1.5s infinite ease-out;
+		}
+	}
+}
+.patternlib-card-host {
+	display: block;
+}
+.corporate-theme {
+	--card-background-color-whilehover: var(--color-yellow);
+	--card-background-color-whileactive: var(--color-yellow);
+	--card-border-color-whileactive: var(--color-yellow);
+	--card-text-color-whilehover: var(--color-black);
+	--card-text-color-whileactive: var(--color-black);
+	--card-border-color-children-whilehover: var(--color-black);
+	--card-border-color-children-whileactive: var(--color-black);
+}
+.hau-theme {
+	--card-background-color-whilehover: var(--color-blue);
+	--card-background-color-whileactive: var(--color-blue);
+	--card-border-color-whileactive: var(--color-blue);
+	--card-text-color-whilehover: var(--color-white);
+	--card-text-color-whileactive: var(--color-white);
+	--card-border-color-children-whilehover: var(--color-white);
+	--card-border-color-children-whileactive: var(--color-white);
+}
+.patternlib-card-container {
+	box-sizing: border-box;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 1px solid var(--color-steel-300);
+	background-color: var(--color-white);
+	&:hover {
+		&:not(.no-states) {
+			border: 1px solid var(--color-steel-100);
+			background-color: var(--color-steel-100);
+			cursor: pointer;
+		}
+	}
+	&:active {
+		&:not(.no-states) {
+			border-color: var(--card-border-color-whileActive, var(--color-yellow));
+			background-color: var(--card-background-color-whileActive, var(--color-yellow));
+			* {
+				color: var(--card-text-color-whileActive, var(--color-black)) !important;
+				border-color: var(--card-border-color-children-whileActive, var(--color-black)) !important;
+			}
+		}
+	}
+}
+.patternlib-card-container.no-border {
+	border: none !important;
+}
+.patternlib-card-container-navigation {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: var(--color-white);
+	cursor: pointer;
+	.patternlib-card-container-navigation-grey {
+		background-color: var(--color-steel-100);
+	}
+	&:hover {
+		background-color: var(--card-background-color-whileHover, var(--color-yellow));
+		* {
+			color: var(--card-text-color-whileHover, var(--color-black)) !important;
+			border-color: var(--card-border-color-children-whileHover, var(--color-black)) !important;
+		}
+	}
+}
+.patternlib-carousel-item-host {
+	display: block;
+}
+.patternlib-carousel-host {
+	display: block;
+	position: relative;
+}
+.patternlib-carousel-host.corporate-theme {
+	--carousel-indicator: var(--color-yellow);
+	--carousel-slideshow-arrow-background-color: var(--color-yellow);
+	--carousel-slideshow-arrow-text-color: var(--color-black);
+	--carousel-headline-font-family: var(--font-liebherr-head-black);
+	--carousel-headline-font-size: var(--size-font-h-3-head-black);
+}
+.patternlib-carousel-host.hau-theme {
+	--carousel-indicator: var(--color-blue);
+	--carousel-slideshow-arrow-background-color: var(--color-blue);
+	--carousel-slideshow-arrow-text-color: var(--color-white);
+	--carousel-headline-font-family: var(--font-liebherr-head-regular);
+	--carousel-headline-font-size: var(--size-font-h-3-head-regular);
+}
+.patternlib-carousel-wrapper {
+	position: relative;
+	.patternlib-carousel-main {
+		object-fit: cover;
+		position: relative;
+		overflow: hidden;
+	}
+	#carousel-page {
+		position: absolute;
+		width: 100%;
+		transition: all 0.5s ease;
+		left: 0px;
+	}
+	#carousel-page-prev {
+		position: absolute;
+		width: 100%;
+		transition: all 0.5s ease;
+		left: -100%;
+	}
+	#carousel-page-next {
+		position: absolute;
+		width: 100%;
+		transition: all 0.5s ease;
+		left: 100%;
+	}
+	#carousel-page.left-animation {
+		transition: all 0.5s ease;
+		left: -100%;
+	}
+	#carousel-page-next.left-animation {
+		transition: all 0.5s ease;
+		left: 0;
+	}
+	#carousel-page.right-animation {
+		transition: all 0.5s ease;
+		left: 100%;
+	}
+	#carousel-page-prev.right-animation {
+		transition: all 0.5s ease;
+		left: 0;
+	}
+	#carousel-page-slideshow {
+		position: absolute;
+		width: 58%;
+		transition: all 0.5s ease;
+		left: 21%;
+		height: 100%;
+		overflow: hidden;
+		top: 0;
+	}
+	#carousel-page-slideshow-prev {
+		position: absolute;
+		width: 58%;
+		transition: all 0.5s ease;
+		left: -45%;
+		height: 80%;
+		overflow: hidden;
+		top: 10%;
+	}
+	#carousel-page-slideshow-prev-left {
+		position: absolute;
+		width: 58%;
+		transition: all 0.5s ease;
+		left: -111%;
+		height: 80%;
+		overflow: hidden;
+		top: 10%;
+	}
+	#carousel-page-slideshow-next {
+		position: absolute;
+		width: 58%;
+		transition: all 0.5s ease;
+		left: 87%;
+		height: 80%;
+		overflow: hidden;
+		top: 10%;
+	}
+	#carousel-page-slideshow-next-right {
+		position: absolute;
+		width: 58%;
+		transition: all 0.5s ease;
+		left: 153%;
+		height: 80%;
+		overflow: hidden;
+		top: 10%;
+	}
+	#carousel-page-slideshow.left-animation {
+		transition: all 0.5s ease;
+		left: -45%;
+		height: 80%;
+		overflow: hidden;
+		top: 10%;
+	}
+	#carousel-page-slideshow-prev.left-animation {
+		transition: all 0.5s ease;
+		left: -111%;
+		height: 100%;
+		overflow: hidden;
+		top: 0;
+	}
+	#carousel-page-slideshow-next.left-animation {
+		transition: all 0.5s ease;
+		left: 21%;
+		height: 100%;
+		overflow: hidden;
+		top: 0;
+	}
+	#carousel-page-slideshow-next-right.left-animation {
+		transition: all 0.5s ease;
+		left: 87%;
+		height: 80%;
+		overflow: hidden;
+		top: 10%;
+	}
+	#carousel-page-slideshow.right-animation {
+		transition: all 0.5s ease;
+		left: 87%;
+		height: 80%;
+		overflow: hidden;
+		top: 10%;
+	}
+	#carousel-page-slideshow-prev.right-animation {
+		transition: all 0.5s ease;
+		left: 21%;
+		height: 100%;
+		overflow: hidden;
+		top: 0;
+	}
+	#carousel-page-slideshow-prev-left.right-animation {
+		position: absolute;
+		width: 58%;
+		transition: all 0.5s ease;
+		left: -45%;
+		height: 80%;
+		overflow: hidden;
+		top: 10%;
+	}
+	#carousel-page-slideshow-next.right-animation {
+		transition: all 0.5s ease;
+		left: 139%;
+		height: 100%;
+		overflow: hidden;
+		top: 0;
+	}
+	.patternlib-carousel-top {
+		background-color: var(--color-white);
+		width: 100%;
+		height: 66px;
+		.patternlib-carousel-top-left {
+			font-family: var(--carousel-headline-font-family, var(--font-liebherr-head-black));
+			font-size: var(--carousel-headline-font-size, var(--size-font-h-3-head-black));
+			color: var(--color-black);
+			font-weight: 900;
+			display: inline-block;
+			margin-left: 11%;
+		}
+		.patternlib-carousel-top-right {
+			display: block;
+			float: right;
+			margin-right: 21%;
+			.patternlib-carousel-indicator-number {
+				padding-top: 0;
+			}
+		}
+	}
+	.patternlib-carousel-bottom {
+		width: 100%;
+		height: 92px;
+		background-color: var(--color-white);
+		.patternlib-carousel-indicator {
+			padding-top: 32px;
+			button {
+				cursor: pointer;
+				outline: none;
+				border: 0;
+				height: 6px;
+				width: 28px;
+				margin: 0 4px;
+				background-color: var(--color-steel-400);
+			}
+			.patternlib-carousel-indicator-active {
+				background-color: var(--carousel-indicator, var(--color-yellow));
+			}
+		}
+		.patternlib-carousel-arrow {
+			padding-top: 18px;
+			span {
+				cursor: pointer;
+				padding-right: 12px;
+			}
+		}
+	}
+	.patternlib-carousel-indicator-number {
+		padding-top: 24px;
+		font-family: var(--font-liebherr-head-regular);
+		height: 40px;
+		color: var(--color-steel-400);
+		.patternlib-carousel-indicator-number-first {
+			display: inline-block;
+			font-weight: 700;
+			font-size: var(--size-font-h-4-head-regular);
+		}
+		.patternlib-carousel-indicator-number-last {
+			display: inline-block;
+			font-size: var(--size-font-copy-regular-small);
+			vertical-align: top;
+			padding-top: 5px;
+		}
+	}
+	.patternlib-carousel-slideshow-arrow {
+		position: absolute;
+		z-index: 4;
+		font-family: var(--font-liebherr-text-regular);
+		width: 100%;
+		display: inline-flex;
+		justify-content: space-between;
+		top: 50%;
+		transform: translateY(-50%);
+		.patternlib-carousel-slideshow-arrow-left {
+			background-color: var(--carousel-slideshow-arrow-background-color, var(--color-yellow));
+			color: var(--carousel-slideshow-arrow-text-color, var(--color-black));
+			font-size: 38px;
+			display: inline-block;
+			margin-left: 10px;
+			padding: 16px;
+			cursor: pointer;
+		}
+		.patternlib-carousel-slideshow-arrow-right {
+			background-color: var(--carousel-slideshow-arrow-background-color, var(--color-yellow));
+			color: var(--carousel-slideshow-arrow-text-color, var(--color-black));
+			font-size: 38px;
+			display: inline-block;
+			margin-right: 10px;
+			padding: 16px;
+			cursor: pointer;
+		}
+	}
+	.patternlib-carousel-item-description {
+		width: 100%;
+		font-family: var(--font-liebherr-text-bold);
+		font-weight: 900;
+		font-size: var(--size-font-copy-bold);
+		padding-top: 18px;
+		span {
+			margin-left: 21%;
+		}
+	}
+}
+.patternlib-checkbox-host {
+	display: block;
+}
+.patternlib-checkbox-host.corporate-theme {
+	--checkbox-background-color: var(--color-yellow);
+	--checkbox-border-color-ischecked: var(--color-yellow);
+	--checkbox-icon: url("data:image/svg+xml;utf8,<svg width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15.5768 1.23604L6.02798 12.2947L1.0412 7.79134' stroke='black' stroke-width='2'/></svg>");
+}
+.patternlib-checkbox-host.hau-theme {
+	--checkbox-background-color: var(--color-blue);
+	--checkbox-border-color-ischecked: var(--color-blue);
+	--checkbox-icon: url("data:image/svg+xml;utf8,<svg width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15.5768 1.23604L6.02798 12.2947L1.0412 7.79134' stroke='white' stroke-width='2'/></svg>");
+}
+.patternlib-checkbox-wrapper {
+	align-items: center;
+	display: inline-flex;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.patternlib-checkbox-label {
+	color: var(--color-black);
+	font-family: var(--font-liebherr-text-regular);
+	font-size: var(--size-font-copy-regular-small);
+	cursor: pointer;
+}
+.patternlib-checkbox-label-disabled {
+	color: var(--color-steel-400) !important;
+}
+.patternlib-checkbox {
+	-webkit-appearance: none;
+	appearance: none;
+	border-color: var(--color-black);
+	border-radius: 2px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: var(--color-white);
+	font-size: 16px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
+	&:checked {
+		background-color: var(--checkbox-background-color, var(--color-yellow));
+		background-image: var(--checkbox-icon, url("data:image/svg+xml;utf8,<svg width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15.5768 1.23604L6.02798 12.2947L1.0412 7.79134' stroke='black' stroke-width='2'/></svg>"));
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: var(--checkbox-border-color-isChecked, var(--color-yellow));
+		border-radius: 2px;
+		&:disabled {
+			border-color: var(--color-steel-400);
+			background-color: var(--color-steel-400);
+		}
+	}
+	&:disabled {
+		color: var(--color-steel-400);
+		border: 1px solid;
+		border-color: var(--color-steel-400);
+	}
+}
+[data-focused=true] {
+	.patternlib-checkbox-wrapper {
+		&:active {
+			.patternlib-checkbox {
+				border-color: var(--color-steel-500);
+			}
+			.patternlib-checkbox-error {
+				border-color: var(--color-steel-500);
+			}
+			.patternlib-checkbox-success {
+				border-color: var(--color-steel-500);
+			}
+		}
+	}
+	.patternlib-radiobutton-item-container {
+		&:active {
+			input {
+				~ {
+					.patternlib-radiobutton-item-checkmark {
+						border-color: var(--color-steel-500);
+					}
+				}
+			}
+		}
+	}
+}
+.patternlib-checkbox-error {
+	&:focus {
+		outline: none;
+	}
+	-webkit-appearance: none;
+	appearance: none;
+	border-color: var(--color-warning);
+	border-radius: 2px;
+	border-style: solid;
+	border-width: 2px;
+	background-color: var(--color-white);
+	font-size: 16px;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+	&:checked {
+		background-color: var(--checkbox-background-color, var(--color-yellow));
+		background-image: var(--checkbox-icon, url("data:image/svg+xml;utf8,<svg width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15.5768 1.23604L6.02798 12.2947L1.0412 7.79134' stroke='black' stroke-width='2'/></svg>"));
+		background-position: center;
+		background-repeat: no-repeat;
+		&:disabled {
+			border-color: var(--color-steel-400);
+			background-color: var(--color-steel-400);
+		}
+	}
+	&:disabled {
+		border: 1px solid;
+		border-color: var(--color-steel-400);
+	}
+}
+.patternlib-checkbox-success {
+	&:focus {
+		outline: none;
+	}
+	-webkit-appearance: none;
+	appearance: none;
+	border-color: var(--color-success);
+	border-radius: 2px;
+	border-style: solid;
+	border-width: 2px;
+	background-color: var(--color-white);
+	font-size: 16px;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+	&:checked {
+		background-color: var(--checkbox-background-color, var(--color-yellow));
+		background-image: var(--checkbox-icon, url("data:image/svg+xml;utf8,<svg width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15.5768 1.23604L6.02798 12.2947L1.0412 7.79134' stroke='black' stroke-width='2'/></svg>"));
+		background-position: center;
+		background-repeat: no-repeat;
+		&:disabled {
+			border-color: var(--color-steel-400);
+			background-color: var(--color-steel-400);
+		}
+	}
+	&:disabled {
+		border: 1px solid;
+		border-color: var(--color-steel-400);
+	}
+}
+.patternlib-checkbox-label-error {
+	color: var(--color-warning);
+	font-family: var(--font-liebherr-text-regular);
+	font-size: var(--size-font-copy-regular-small);
+	cursor: pointer;
+}
+.patternlib-checkbox-label-success {
+	color: var(--color-success);
+	font-family: var(--font-liebherr-text-regular);
+	font-size: var(--size-font-copy-regular-small);
+	cursor: pointer;
+}
+.patternlib-datepicker-input-host {
+	display: block;
+}
+.patternlib-datepicker-input-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	line-height: 20px;
+	padding-bottom: 10px;
+	label {
+		font-size: var(--size-font-copy-bold-small);
+		font-family: var(--font-liebherr-head-regular);
+		font-weight: 600;
+	}
+	span {
+		font-size: var(--size-font-copy-regular-smaller);
+		color: var(--color-steel-800);
+		font-family: var(--font-liebherr-text-regular);
+	}
+}
+.patternlib-datepicker-input-container {
+	box-sizing: border-box;
+	border-radius: 0;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	&:hover {
+		&:not(.is-open) {
+			cursor: pointer;
+			border-color: var(--color-steel-600) !important;
+			.patternlib-datepicker-input {
+				color: var(--color-steel-600) !important;
+			}
+		}
+		.patternlib-datepicker-input-icon {
+			* {
+				color: var(--color-steel-600) !important;
+			}
+		}
+	}
+	&:active {
+		&:not(.is-open) {
+			border-color: var(--color-black) !important;
+			.patternlib-datepicker-input {
+				color: var(--color-steel-800) !important;
+			}
+		}
+		.patternlib-datepicker-input-icon {
+			* {
+				color: var(--color-steel-800) !important;
+			}
+		}
+	}
+	.patternlib-datepicker-input {
+		font-size: var(--size-font-copy-regular);
+		font-family: var(--font-liebherr-text-regular);
+	}
+	.patternlib-datepicker-input-icon {
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		* {
+			color: var(--color-steel-800) !important;
+		}
+	}
+	.patternlib-datepicker-input-status-success {
+		border-color: var(--color-success) !important;
+		&:hover {
+			&:not(.is-open) {
+				border-color: var(--color-success) !important;
+			}
+		}
+	}
+	.patternlib-datepicker-input-status-error {
+		border-color: var(--color-warning) !important;
+		&:hover {
+			&:not(.is-open) {
+				border-color: var(--color-warning) !important;
+			}
+		}
+	}
+}
+.patternlib-datepicker-input-container.small {
+	height: 42px;
+}
+.patternlib-datepicker-input-container.big {
+	height: 52px;
+}
+.patternlib-datepicker-input-container.disabled {
+	border: 1px solid var(--color-steel-300) !important;
+	background-color: var(--color-steel-100);
+	* {
+		color: var(--color-steel-400) !important;
+	}
+}
+.patternlib-datepicker-input-status {
+	font-size: var(--size-font-copy-regular-smaller);
+	line-height: 24px;
+	font-family: var(--font-liebherr-text-regular);
+	.patternlib-datepicker-input-status-success {
+		color: var(--color-success) !important;
+	}
+	.patternlib-datepicker-input-status-error {
+		color: var(--color-warning) !important;
+	}
+}
+.patternlib-datepicker-item-host {
+	display: block;
+}
+.patternlib-datepicker-item-host.corporate-theme {
+	--datepicker-item-background-color: var(--color-yellow);
+	--datepicker-item-text-color: var(--color-black);
+}
+.patternlib-datepicker-item-host.hau-theme {
+	--datepicker-item-background-color: var(--color-blue);
+	--datepicker-item-text-color: var(--color-white);
+}
+.patternlib-datepicker-item {
+	width: 44px;
+	height: 44px;
+	font-size: var(--size-font-copy-regular);
+	text-transform: uppercase;
+	text-align: center;
+	background: none;
+	outline: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	&:active {
+		&:not(:disabled) {
+			&:not(.active) {
+				color: var(--color-black);
+			}
+		}
+	}
+	&:disabled {
+		background: var(--color-steel-100);
+		font-family: var(--font-liebherr-text-regular) !important;
+	}
+}
+.patternlib-datepicker-item.active {
+	&:not(:disabled) {
+		background: var(--datepicker-item-background-color, var(--color-yellow));
+		color: var(--datepicker-item-text-color, var(--color-black));
+		cursor: default !important;
+	}
+}
+.patternlib-datepicker-host {
+	display: block;
+}
+.patternlib-datepicker-wrapper {
+	position: relative;
+	.patternlib-datepicker-container {
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		position: absolute;
+		width: 315px;
+		padding: 32px;
+		background-color: var(--color-white);
+		box-shadow: 0px 20px 40px rgba(58, 64, 70, 0.2);
+		.arrow-icon-wrapper {
+			width: 42px;
+			height: 42px;
+			cursor: pointer;
+			outline: none;
+			border: none;
+			background: none;
+			z-index: 1;
+		}
+	}
+}
+.patternlib-dropdown {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	.patternlib-dropdown-label {
+		font-size: var(--size-font-copy-bold-small);
+		font-weight: 600;
+		font-family: var(--font-liebherr-head-regular);
+		margin-bottom: 10px;
+	}
+	.patternlib-dropdown-status {
+		font-size: var(--size-font-copy-regular-smaller);
+		line-height: 24px;
+		font-family: var(--font-liebherr-text-regular);
+		position: relative;
+	}
+	.patternlib-dropdown-status-error {
+		color: var(--color-warning);
+	}
+	.patternlib-dropdown-status-success {
+		color: var(--color-success);
+	}
+	.patternlib-dropdown-wrapper {
+		position: relative;
+	}
+	.patternlib-dropdown-container {
+		cursor: pointer;
+		position: relative;
+		color: var(--color-black);
+		z-index: 1;
+		font-family: var(--font-liebherr-text-regular);
+		border-radius: 0;
+		border: 1px solid var(--color-black);
+		background-color: var(--color-white);
+		padding: 1px;
+		box-sizing: border-box;
+		line-height: 20px;
+		font-size: var(--size-font-copy-regular);
+		.patternlib-dropdown-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 14px 0 19px;
+			.patternlib-dropdown-remove-icon-wrapper {
+				position: relative;
+				top: 1px;
+				padding-right: 6px;
+			}
+			.patternlib-dropdown-arrow-icon-wrapper {
+				position: relative;
+				top: 1px;
+			}
+			input {
+				box-sizing: border-box;
+				cursor: pointer;
+				border: 0;
+				padding: 0;
+				width: 100%;
+				outline: none;
+				font-size: var(--size-font-copy-regular);
+				font-family: var(--font-liebherr-text-regular);
+				&:hover {
+					border: 0;
+					&::placeholder {
+						color: var(--color-steel-600);
+					}
+				}
+				&:focus {
+					border: 0;
+				}
+			}
+		}
+		.patternlib-dropdown-placeholder {
+			color: var(--color-steel-800);
+		}
+		.patternlib-dropdown-item {
+			padding: 0 20px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			background-color: var(--color-steel-100);
+			font-weight: normal;
+			&:hover {
+				background-color: var(--color-steel-200);
+			}
+		}
+		.patternlib-dropdown-item-arrow-on-focus {
+			background-color: var(--color-steel-200);
+		}
+		&:hover {
+			border: 1px solid var(--color-steel-600);
+			.patternlib-dropdown-placeholder {
+				color: var(--color-steel-600);
+			}
+		}
+		&:focus {
+			border-radius: 0;
+			outline: none;
+		}
+	}
+	.patternlib-dropdown-container-focused {
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		z-index: 2;
+		color: var(--color-black);
+		border: 2px solid var(--color-black) !important;
+		padding: 0;
+		border-radius: 0;
+		outline: none;
+		box-shadow: 0px 20px 40px rgba(58, 64, 70, 0.2);
+	}
+	.patternlib-dropdown-container-error {
+		border: 1px solid var(--color-warning);
+		&:hover {
+			border: 1px solid var(--color-warning);
+		}
+	}
+	.patternlib-dropdown-container-error-focused {
+		z-index: 2;
+		padding: 0;
+		color: var(--color-black);
+		border: 2px solid var(--color-warning) !important;
+		border-radius: 0;
+		outline: none;
+		box-shadow: 0px 20px 40px rgba(58, 64, 70, 0.2);
+	}
+	.patternlib-dropdown-container-success {
+		border: 1px solid var(--color-success);
+		&:hover {
+			border: 1px solid var(--color-success);
+		}
+	}
+	.patternlib-dropdown-container-success-focused {
+		z-index: 2;
+		padding: 0;
+		color: var(--color-black);
+		border: 2px solid var(--color-success) !important;
+		border-radius: 0;
+		outline: none;
+		box-shadow: 0px 20px 40px rgba(58, 64, 70, 0.2);
+	}
+	.patternlib-dropdown-container-disabled {
+		border-radius: 0;
+		border: 1px solid var(--color-steel-300);
+		background-color: var(--color-steel-100);
+		padding: 1px 1px;
+		box-sizing: border-box;
+		line-height: 20px;
+		font-size: var(--size-font-copy-regular);
+		font-family: var(--font-liebherr-text-regular);
+		.patternlib-dropdown-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 19px;
+		}
+		.patternlib-dropdown-placeholder {
+			color: var(--color-steel-400);
+			display: flex;
+			align-items: center;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	.patternlib-dropdown-item-container {
+		max-height: 240px;
+		overflow: scroll;
+		overflow-x: hidden;
+		z-index: 10;
+		&:focus {
+			border: 0 !important;
+			outline: none;
+		}
+	}
+	.patternlib-dropdown-item-container-small {
+		.checkbox-wrapper {
+			padding: 5px 14px;
+		}
+	}
+}
+.patternlib-flyoutmenu-item-host {
+	display: block;
+	overflow: hidden;
+}
+.patternlib-flyoutmenu-item {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border-radius: 0px;
+	border: none;
+	font-family: var(--font-liebherr-text-bold);
+	font-size: var(--size-font-copy-bold-small);
+	font-weight: 700;
+	line-height: 1.1;
+	padding: 0 24px 0 24px;
+	margin: 0;
+	text-align: left;
+	height: 36px;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	cursor: pointer;
+	div {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	&:focus {
+		outline: 0;
+	}
+	&:hover {
+		background-color: var(--color-steel-100);
+	}
+	&:disabled {
+		color: var(--color-steel-400);
+	}
+}
+.patternlib-flyoutmenu-separator-host {
+	display: block;
+}
+.patternlib-flyoutmenu-separator {
+	width: auto;
+	height: 36px;
+	padding: 0 24px 0 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	div {
+		width: 100%;
+		height: 1px;
+		background-color: var(--color-steel-100);
+	}
+}
+.patternlib-flyoutmenu-host {
+	display: contents;
+}
+.patternlib-flyoutmenu-container {
+	position: relative;
+	.patternlib-flyoutmenu-wrapper {
+		display: block;
+		position: absolute;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-elevation-middle);
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-top {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-top: -24px;
+			margin-left: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent transparent var(--color-white) transparent;
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-top-left {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 32px;
+			margin-top: -24px;
+			margin-left: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent transparent var(--color-white) transparent;
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-top-right {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 32px;
+			margin-top: -24px;
+			margin-right: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent transparent var(--color-white) transparent;
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-right {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			margin-top: -12px;
+			margin-left: 0;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent transparent transparent var(--color-white);
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-right-top {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 32px;
+			left: 100%;
+			margin-top: -12px;
+			margin-left: 0;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent transparent transparent var(--color-white);
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-right-bottom {
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 32px;
+			left: 100%;
+			margin-bottom: -12px;
+			margin-left: 0;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent transparent transparent var(--color-white);
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-bottom {
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-top: 0;
+			margin-left: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: var(--color-white) transparent transparent transparent;
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-bottom-left {
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 32px;
+			margin-top: 0;
+			margin-left: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: var(--color-white) transparent transparent transparent;
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-bottom-right {
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			right: 32px;
+			margin-top: 0;
+			margin-right: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: var(--color-white) transparent transparent transparent;
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-left {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 100%;
+			margin-top: -12px;
+			margin-left: 0;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent var(--color-white) transparent transparent;
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-left-top {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 32px;
+			right: 100%;
+			margin-top: -12px;
+			margin-left: 0;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent var(--color-white) transparent transparent;
+		}
+	}
+	.patternlib-flyoutmenu-wrapper.arrow-left-bottom {
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 32px;
+			right: 100%;
+			margin-bottom: -12px;
+			margin-left: 0;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent var(--color-white) transparent transparent;
+		}
+	}
+	.patternlib-flyoutmenu-avatar-container {
+		width: 80px;
+		height: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.patternlib-flyoutmenu-user-name {
+		font-family: var(--font-liebherr-text-bold);
+		font-size: var(--size-font-copy-bold);
+		div {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+	.patternlib-flyoutmenu-user-info {
+		font-family: var(--font-liebherr-text-regular);
+		font-size: var(--size-font-copy-regular-small);
+		div {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+}
+.patternlib-footer {
+	display: flex;
+	width: 100%;
+	background-color: var(--color-black);
+	.patternlib-footer-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		font-family: var(--font-liebherr-text-regular);
+		padding: 60px 110px 20px 110px;
+		.patternlib-footer-section {
+			margin: 10px 10px 60px 10px;
+			width: 240px;
+			.patternlib-footer-section-title {
+				line-height: 40px;
+				color: var(--color-white);
+				font-family: var(--font-liebherr-text-bold);
+				font-size: var(--size-font-copy-regular);
+				font-weight: bold;
+				padding-bottom: 20px;
+			}
+			.patternlib-footer-section-item {
+				line-height: 40px;
+				a {
+					color: var(--color-steel-400);
+					font-size: var(--size-font-copy-regular-smaller);
+					font-weight: 500;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.patternlib-footer-bottom {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		align-items: baseline;
+		width: 100%;
+		font-family: var(--font-liebherr-text-regular);
+		font-weight: 500;
+		font-size: var(--size-font-copy-regular-smaller);
+		color: var(--color-steel-400);
+		.patternlib-footer-liebherr-icon {
+			padding: 0 0.8vw 0 10px;
+		}
+		.patternlib-footer-additional-link {
+			display: flex;
+			line-height: 30px;
+			.patternlib-footer-section-item {
+				padding: 0 1.5vw 0 0;
+				a {
+					text-decoration: none;
+					color: var(--color-steel-400);
+				}
+			}
+		}
+		.patternlib-footer-arrow-icon {
+			position: absolute;
+			z-index: 2;
+			right: -76px;
+			bottom: 4px;
+			cursor: pointer;
+		}
+	}
+	.patternlib-footer-portal {
+		width: 100%;
+		display: flex;
+		padding: 16px 120px 14px 120px;
+		justify-content: space-between;
+		.patternlib-footer-portal-text {
+			display: flex;
+			color: var(--color-white);
+			line-height: 30px;
+			font-family: var(--font-liebherr-text-regular);
+			font-size: 12px;
+			div {
+				padding-right: 40px;
+			}
+			a {
+				color: var(--color-white);
+				text-decoration: none;
+			}
+		}
+	}
+}
+.patternlib-hero-image-host {
+	display: grid;
+}
+.patternlib-hero-image-host.corporate-theme {
+	--hero-image-headline-font-family: var(--font-liebherr-head-black);
+	--hero-image-headline-font-size: var(--size-font-h-1-head-black);
+	--hero-image-card-separator-height: 9px;
+	--hero-image-card-separator-margin-top: 16.5px;
+	--hero-image-card-separator-margin-bottom: 9px;
+}
+.patternlib-hero-image-host.hau-theme {
+	--hero-image-headline-font-family: var(--font-liebherr-head-regular);
+	--hero-image-headline-font-size: var(--size-font-h-1-head-regular);
+	--hero-image-card-separator-height: 5px;
+	--hero-image-card-separator-margin-top: 20px;
+	--hero-image-card-separator-margin-bottom: 15px;
+}
+
+.card-separator {
+	width: 100%;
+	height: var(--hero-image-card-separator-height, 9px);
+	background-color: var(--color-black);
+}
+.card-separator.card-separator-top {
+	margin-bottom: var(--hero-image-card-separator-margin-bottom, 9px);
+}
+.card-separator.card-separator-bottom {
+	margin-top: var(--hero-image-card-separator-margin-top, 16.5px);
+}
+.card-container {
+	display: inline-block;
+	position: relative;
+	.card-wrapper {
+		width: 100%;
+		display: flex;
+		position: absolute;
+		font-family: var(--hero-image-headline-font-family, var(--font-liebherr-head-black));
+		font-size: var(--hero-image-headline-font-size, var(--size-font-h-1-head-black));
+		line-height: 0;
+		span {
+			margin: 0;
+			line-height: 66px;
+			text-align: left;
+			color: var(--color-black);
+			overflow: hidden;
+			white-space: pre-wrap;
+			text-overflow: ellipsis;
+		}
+		p {
+			margin: 0;
+			font-family: var(--font-liebherr-text-regular);
+			font-size: var(--size-font-copy-regular-small);
+			line-height: 24px;
+			text-align: left;
+			color: var(--color-black);
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	.card-content {
+		z-index: 3;
+	}
+}
+.patternlib-icon-host {
+	display: block;
+}
+[class^=icon-] {
+	font-family: "Liebherr-Icons" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*=
+	icon-] {
+		font-family: "Liebherr-Icons" !important;
+		speak: never;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+.patternlib-icon-liebherr-hotels-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-order-details-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-product-catalog-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-product-documents-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-spare-parts-catalog-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-aerospace-transportation-system-1-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-components-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-gear-cutting-technology-automation-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-telescope-loader-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-service-menu-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-unused-employee-potential-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-wheel-loader-big-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-wheel-loader-small-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crawler-loader-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-envelope-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-fax-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-health-activities-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-plane-take-off-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-predictive-maintenance-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-phone-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-service-partner-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-x-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-LPS-supplier-portal-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-plane-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-refrigeration-freezing-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-service-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-aerospace-transportation-system-2-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-back-arrow-circle-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-checkmark-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-edit-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-upload-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-history-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-upload-invitation-overview-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-upload-invitation-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-my-uploads-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-tracking-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-arrow-down-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-ballast-1-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-ballast-2-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-bin-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-calender-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-circle-arrow-right-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-common-rail-systems-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-concrete-pumps-icon-rgb-64px-1 {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-concrete-pumps-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-concrete-technology-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-connected-components-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-control-technology-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crane-BOS-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crane-CBB-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crane-LHM-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crane-LRS-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crane-MCR-main-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crane-STS-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crawler-crane-LWN-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crawler-excavator-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-crawler-tractor-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-deep-foundation-icon-rgb-64px-1 {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-deep-foundation-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-document3-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-download-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-duty-cycle-crawler-crane-2-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-duty-cycle-crawler-crane-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-electric-machines-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-electronics-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-extra-jib-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-fast-erecting-crane-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-filter-adjust-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-flat-top-crane-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-gateway-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-gearboxes-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-generator-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-high-top-crane-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-hook-height-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-hydraulic-cylinders-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-hydraulic-fast-erecting-crane-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-hydraulic-pumps-motors-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-info-circle-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-info-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-large-diameter-bearings-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-luffing-jib-crane-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-material-handling-technology-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-measuring-device-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-mining-excavator-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-mining-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-mining-truck-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-mixing-plant-icon-2-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-mixing-plant-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-mobile-construction-crane-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-mobile-crane-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-pipe-layer-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-plus-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-printer-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-quality-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-reachstacker-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-rotation-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-search-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-shopping-cart-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-system-drive-technology-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-telescopic-jib-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-user-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-warning-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-wheeled-excavator-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-winches-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-icon-liebherr-globe-icon-rgb-64px {
+	&:before {
+		content: "";
+	}
+}
+.patternlib-image-host {
+	display: block;
+}
+img {
+	max-width: 100%;
+}
+.patternlib-list-host {
+	display: block;
+}
+.patternlib-list {
+	.patternlib-list-header {
+		font-family: var(--font-liebherr-head-black);
+		font-size: 16px;
+		font-weight: 900;
+		line-height: 1.1;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.patternlib-list-item {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		.patternlib-list-item-separator {
+			border-bottom: 1px solid #e6e5e3;
+		}
+		.patternlib-list-item-label {
+			font-family: var(--font-liebherr-text-bold);
+			font-size: var(--size-font-copy-bold);
+			font-weight: 700;
+			line-height: 28px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			padding-right: 16px;
+		}
+		.patternlib-list-item-value {
+			font-family: var(--font-liebherr-text-regular);
+			font-size: var(--size-font-copy-regular);
+			font-weight: 400;
+			line-height: 28px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			z-index: 1;
+		}
+	}
+}
+.patternlib-loadingbar-host {
+	display: block;
+}
+.patternlib-loadingbar-host.corporate-theme {
+	--loading-bar-color: var(--color-yellow);
+}
+.patternlib-loadingbar-host.hau-theme {
+	--loading-bar-color: var(--color-blue);
+}
+.loading-bar-container {
+	height: fit-content;
+	position: relative;
+	box-sizing: border-box;
+	.loading-bar {
+		position: absolute;
+	}
+	.loading-bar-default-progress {
+		position: absolute;
+		line {
+			stroke: var(--loading-bar-color, var(--color-yellow)) !important;
+		}
+	}
+	.loading-bar-progress {
+		position: absolute;
+		line {
+			stroke: var(--loading-bar-color, var(--color-yellow)) !important;
+		}
+	}
+	.loading-bar-label {
+		padding-top: 18px;
+		font-weight: 700;
+		color: var(--color-black);
+		font-family: var(--font-liebherr-text-bold);
+		font-size: var(--size-font-copy-regular-small);
+	}
+}
+.patternlib-main-navigation-host {
+	display: block;
+}
+.patternlib-main-navigation-container {
+	width: 100%;
+	background-color: var(--color-white);
+	box-sizing: border-box;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	.partner-logo-devider {
+		width: 2px;
+		height: 44px;
+		background-color: var(--color-steel-200);
+		margin-right: var(--spacing-m);
+	}
+	.portal-name {
+		font-family: var(--font-liebherr-text-bold);
+		font-size: var(--size-font-copy-bold-small);
+		color: var(--color-black);
+	}
+	.menu-button {
+		border: none;
+		outline: none;
+		background: none;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+	.mobile-menu {
+		position: relative;
+		background-color: var(--color-steel-100);
+		z-index: 50;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+			font-family: var(--font-liebherr-text-bold);
+			font-size: var(--size-font-copy-bold);
+		}
+		.mobile-menu-tabitem-wrapper {
+			border-bottom: 1px solid var(--color-steel-400);
+		}
+		.mobile-menu-tabitem-wrapper.subitem {
+			background-color: var(--color-steel-200);
+		}
+		.mobile-menu-expand-subitems-icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 80px;
+			cursor: pointer;
+		}
+		.mobile-menu-tabitem {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			height: 80px;
+			padding-right: 12px;
+			overflow: hidden;
+			cursor: pointer;
+			span {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+		.mobile-menu-subitem {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			height: 80px;
+			padding-right: 12px;
+			overflow: hidden;
+			cursor: pointer;
+			span {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+		.mobile-menu-sub-subitem {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			height: 80px;
+			padding-right: 12px;
+			overflow: hidden;
+			cursor: pointer;
+			background-color: var(--color-steel-300);
+			border-bottom: 1px solid var(--color-steel-400);
+			padding: 0 24px 0 60px;
+			span {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+	.tabitem-menu {
+		position: relative;
+		background-color: var(--color-steel-100);
+		width: 100%;
+		z-index: 50;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+			font-family: var(--font-liebherr-head-regular);
+			font-size: var(--size-font-h-4-head-regular);
+		}
+		.tabitem-menu-tabitem-wrapper {
+			display: flex;
+			width: 224px;
+			padding: 0 0 24px 0;
+			cursor: pointer;
+			.tabitem-menu-tabitem-underline {
+				background-image: linear-gradient(to bottom, transparent 20%, var(--color-black) 21%);
+				background-position: 0 1em;
+				background-repeat: no-repeat;
+				background-size: 0% 4px;
+				transition: background-size 0.5s ease-in-out;
+				text-transform: uppercase;
+				line-height: 44px;
+				&:hover {
+					background-size: 100% 4px;
+					transition-delay: 0s;
+				}
+			}
+		}
+		.tabitem-menu-subitem-container {
+			display: flex;
+			&:hover {
+				.tabitem-menu-tabitem-underline {
+					background-size: 100% 4px;
+					transition-delay: 0s;
+				}
+				.tabitem-menu-sub-subitem-container {
+					ul {
+						display: inline-flex;
+					}
+				}
+			}
+			.tabitem-menu-sub-subitem-container {
+				position: relative;
+				display: contents;
+				ul {
+					display: none;
+					flex-direction: column;
+					position: absolute;
+					left: 448px;
+					width: 100%;
+				}
+				li {
+					font-size: 24px;
+				}
+				.tabitem-menu-sub-subitem-wrapper {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					padding: 0 0 24px 48px;
+					cursor: pointer;
+					width: 100%;
+					min-height: 48px;
+					&:hover {
+						font-family: var(--font-liebherr-head-black);
+					}
+				}
+			}
+		}
+	}
+}
+.patternlib-main-navigation-container.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+.patternlib-modal-host {
+	display: inline;
+}
+.patternlib-modal-container {
+	width: 100%;
+	height: 100%;
+	background: var(--color-white);
+	filter: drop-shadow(0px 20px 40px rgba(58, 64, 70, 0.2));
+	position: relative;
+	.patternlib-modal-header {
+		font-family: var(--font-liebherr-head-black);
+		font-size: var(--size-font-h-4-head-black);
+		font-weight: 900;
+		line-height: 34px;
+		color: var(--color-black);
+	}
+	.patternlib-modal-close-icon {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		width: 42px;
+		height: 42px;
+		cursor: pointer;
+		outline: none;
+		border: none;
+		background: none;
+		z-index: 1;
+	}
+}
+.patternlib-modal-backdrop {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(58, 64, 70, 0.2);
+}
+.patternlib-modal-backdrop-pointer {
+	cursor: pointer;
+}
+.dropdown {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	.dropdown-label {
+		font-size: var(--size-font-copy-bold-small);
+		font-weight: 600;
+		font-family: var(--font-liebherr-head-regular);
+		margin-bottom: 10px;
+	}
+	.dropdown-status {
+		font-size: var(--size-font-copy-regular-smaller);
+		line-height: 24px;
+		font-family: var(--font-liebherr-text-regular);
+		position: relative;
+	}
+	.dropdown-status-error {
+		color: var(--color-warning);
+	}
+	.dropdown-status-success {
+		color: var(--color-success);
+	}
+	.dropdown-wrapper {
+		position: relative;
+	}
+	.dropdown-container {
+		cursor: pointer;
+		position: relative;
+		color: var(--color-black);
+		z-index: 1;
+		font-family: var(--font-liebherr-text-regular);
+		border-radius: 0;
+		border: 1px solid var(--color-black);
+		background-color: var(--color-white);
+		padding: 1px;
+		box-sizing: border-box;
+		line-height: 20px;
+		font-size: var(--size-font-copy-regular);
+		.dropdown-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 14px 0 20px;
+			.dropdown-header-left {
+				display: flex;
+				flex-wrap: wrap;
+				input {
+					height: 38px;
+					padding-left: 5px;
+				}
+			}
+			.dropdown-header-right {
+				display: flex;
+				.dropdown-remove-icon-wrapper {
+					position: relative;
+					top: 1px;
+					padding-right: 6px;
+				}
+				.dropdown-arrow-icon-wrapper {
+					position: relative;
+					top: 1px;
+				}
+			}
+			input {
+				box-sizing: border-box;
+				cursor: pointer;
+				border: 0;
+				padding: 0;
+				outline: none;
+				font-size: var(--size-font-copy-regular);
+				font-family: var(--font-liebherr-text-regular);
+				&:hover {
+					border: 0;
+					&::placeholder {
+						color: var(--color-steel-600);
+					}
+				}
+				&:focus {
+					border: 0;
+				}
+			}
+		}
+		.dropdown-header-multi-select {
+			box-sizing: border-box;
+			padding: 5px 14px;
+		}
+		.dropdown-header-multi-select-small {
+			padding: 0 19px 0 14px;
+		}
+		.dropdown-placeholder {
+			color: var(--color-steel-800);
+		}
+		.dropdown-item {
+			padding: 0 20px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			background-color: var(--color-steel-100);
+			font-weight: normal;
+			&:hover {
+				background-color: var(--color-steel-200);
+			}
+		}
+		&:hover {
+			border: 1px solid var(--color-steel-600);
+			.dropdown-placeholder {
+				color: var(--color-steel-600);
+			}
+		}
+		&:focus {
+			border-radius: 0;
+			outline: none;
+		}
+	}
+	.dropdown-container-focused {
+		position: absolute;
+		cursor: pointer;
+		z-index: 2;
+		color: var(--color-black);
+		border: 2px solid var(--color-black) !important;
+		padding: 0;
+		border-radius: 0;
+		outline: none;
+		box-shadow: 0px 20px 40px rgba(58, 64, 70, 0.2);
+	}
+	.dropdown-container-error {
+		border: 1px solid var(--color-warning);
+		&:hover {
+			border: 1px solid var(--color-warning);
+		}
+	}
+	.dropdown-container-error-focused {
+		z-index: 2;
+		padding: 0;
+		color: var(--color-black);
+		border: 2px solid var(--color-warning) !important;
+		border-radius: 0;
+		outline: none;
+		box-shadow: 0px 20px 40px rgba(58, 64, 70, 0.2);
+	}
+	.dropdown-container-success {
+		border: 1px solid var(--color-success);
+		&:hover {
+			border: 1px solid var(--color-success);
+		}
+	}
+	.dropdown-container-success-focused {
+		z-index: 2;
+		padding: 0;
+		color: var(--color-black);
+		border: 2px solid var(--color-success) !important;
+		border-radius: 0;
+		outline: none;
+		box-shadow: 0px 20px 40px rgba(58, 64, 70, 0.2);
+	}
+	.dropdown-container-disabled {
+		border-radius: 0;
+		border: 1px solid var(--color-steel-300);
+		background-color: var(--color-steel-100);
+		padding: 1px 1px;
+		box-sizing: border-box;
+		line-height: 20px;
+		font-size: var(--size-font-copy-regular);
+		font-family: var(--font-liebherr-text-regular);
+		.dropdown-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 19px;
+		}
+		.dropdown-placeholder {
+			color: var(--color-steel-400);
+			display: flex;
+			align-items: center;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	.dropdown-item-container {
+		max-height: 240px;
+		overflow: auto;
+		overflow-x: hidden;
+		z-index: 10;
+		background-color: var(--color-steel-100);
+		.dropdown-item-multiple-select {
+			width: 100%;
+			padding: 10px 14px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			&:hover {
+				background-color: var(--color-steel-200);
+			}
+		}
+		.dropdown-item-arrow-on-focus {
+			background-color: var(--color-steel-200);
+		}
+	}
+	.dropdown-item-container-small {
+		.dropdown-item-multiple-select {
+			padding: 5px 14px;
+		}
+		.checkbox-wrapper {
+			padding: 5px 14px;
+		}
+	}
+	.dropdown-item-label {
+		z-index: 3;
+		margin: 4px;
+	}
+}
+.patternlib-pill-host {
+	display: block;
+}
+.patternlib-pill-host.corporate-theme {
+	--pill-button-background-color-whilehover: var(--color-clay-light);
+	--pill-button-border-color-whilehover: var(--color-clay-light);
+	--pill-button-text-color-whilehover: var(--color-black);
+	--pill-button-delete-icon-color: var(--color-steel-200);
+}
+.patternlib-pill-host.hau-theme {
+	--pill-button-background-color-whilehover: var(--color-blue);
+	--pill-button-border-color-whilehover: var(--color-blue);
+	--pill-button-text-color-whilehover: var(--color-white);
+	--pill-button-delete-icon-color: var(--color-black);
+}
+.patternlib-pill-button {
+	display: inline-flex;
+	cursor: pointer;
+	outline: none;
+	background-color: var(--color-steel-200);
+	border: 1px solid var(--color-steel-200);
+	box-sizing: border-box;
+	align-items: center;
+	padding: 0 8px;
+	.patternlib-pill-icon {
+		margin-right: 8px;
+	}
+	.delete-icon {
+		background-color: var(--color-black);
+		width: 16px;
+		height: 16px;
+		margin: 0px 0 0 12px;
+		border-radius: 50%;
+		box-sizing: border-box;
+		display: flex;
+		line-height: 16px;
+		justify-content: center;
+		align-items: center;
+		path {
+			stroke: var(--color-steel-200);
+		}
+	}
+	label {
+		cursor: pointer;
+		font-size: var(--size-font-copy-regular-small);
+		font-family: var(--font-liebherr-text-regular);
+		color: var(--color-black);
+		white-space: nowrap;
+	}
+	&:hover {
+		&:not(.active-button) {
+			color: var(--pill-button-text-color-whileHover, var(--color-black));
+			background-color: var(--pill-button-background-color-whileHover, var(--color-clay-light));
+			border-color: var(--pill-button-border-color-whileHover, var(--color-clay-light));
+			background-color: var(--pill-button-text-color-whileHover, var(--color-black));
+			stroke: var(--pill-button-delete-icon-color, var(--color-steel-200));
+		}
+	}
+	&:active {
+		&:not(.active-button-error-status) {
+			* {
+				color: var(--color-black);
+			}
+			background-color: var(--color-steel-200) !important;
+			border: 1px solid var(--color-steel-500) !important;
+			label {
+				color: var(--color-black);
+			}
+			.delete-icon {
+				background-color: var(--color-black);
+				path {
+					stroke: var(--color-steel-200);
+				}
+			}
+		}
+	}
+}
+.active-button-error-status {
+	
+		color: var(--pill-button-text-color-whileHover, var(--color-black));
+
+	background-color: var(--pill-button-background-color-whileHover, var(--color-clay-light));
+	border-color: var(--pill-button-border-color-whileHover, var(--color-clay-light));
+	.delete-icon {
+		background-color: var(--pill-button-text-color-whileHover, var(--color-black));
+		path {
+			stroke: var(--pill-button-delete-icon-color, var(--color-steel-200));
+		}
+	}
+}
+.patternlib-pill-button-no-status {
+	display: inline-flex;
+	cursor: default;
+	outline: none;
+	background-color: var(--color-steel-200);
+	border: 1px solid var(--color-steel-200);
+	box-sizing: border-box;
+	align-items: center;
+	padding: 0 8px;
+	.patternlib-pill-icon {
+		margin-right: 4px;
+	}
+	label {
+		cursor: default;
+		font-size: var(--size-font-copy-regular-small);
+		font-family: var(--font-liebherr-text-regular);
+		color: var(--color-black);
+		white-space: nowrap;
+	}
+	.delete-icon {
+		path {
+			stroke: var(--color-steel-200);
+		}
+	}
+}
+.error-status {
+	* {
+		color: var(--color-white);
+	}
+	background-color: var(--color-warning);
+	border: 1px solid var(--color-warning);
+	label {
+		color: var(--color-white);
+	}
+	.delete-icon {
+		background-color: var(--color-white);
+		path {
+			stroke: var(--color-warning);
+		}
+	}
+	&:hover {
+		&:not(.active-button-error-status) {
+			background-color: var(--pill-button-background-color-whileHover, var(--color-clay-light));
+			border-color: var(--pill-button-border-color-whileHover, var(--color-clay-light));
+			label {
+				color: var(--pill-button-text-color-whileHover, var(--color-black));
+			}
+			.delete-icon {
+				background-color: var(--pill-button-text-color-whileHover, var(--color-black));
+			}
+		}
+	}
+	&:active {
+		&:not(.active-button-error-status) {
+			* {
+				color: var(--color-black);
+			}
+			background-color: var(--color-steel-200) !important;
+			border: 1px solid var(--color-steel-500) !important;
+			label {
+				color: var(--color-black);
+			}
+			.delete-icon {
+				background-color: var(--color-black);
+				path {
+					stroke: var(--color-steel-200);
+				}
+			}
+		}
+	}
+}
+.active-button {
+	background-color: var(--color-black);
+	border: 1px solid var(--color-black);
+	label {
+		color: white;
+	}
+	.delete-icon {
+		background-color: var(--color-steel-300);
+		path {
+			stroke: var(--color-black);
+		}
+	}
+	* {
+		color: white;
+	}
+}
+.active-button-error-status {
+	background-color: var(--color-warning);
+	border: 1px solid var(--color-warning);
+	label {
+		color: var(--color-white);
+	}
+	.delete-icon {
+		background-color: var(--color-white);
+	}
+}
+.patternlib-radiobutton-host {
+	display: block;
+}
+.patternlib-radiobutton-host.corporate-theme {
+	--radiobutton-item-checkmark-bg-color: var(--color-yellow);
+}
+.patternlib-radiobutton-host.hau-theme {
+	--radiobutton-item-checkmark-bg-color: var(--color-blue);
+}
+.patternlib-radiobutton-item-container {
+	display: inline-block;
+	position: relative;
+	padding-left: 40px;
+	cursor: pointer;
+	font-family: var(--font-liebherr-text-regular);
+	font-size: var(--size-font-copy-regular-small);
+	color: var(--color-black);
+	line-height: 26px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		&:checked {
+			~ {
+				.patternlib-radiobutton-item-checkmark {
+					&:after {
+						display: block;
+					}
+				}
+			}
+		}
+		&:disabled {
+			~ {
+				.patternlib-radiobutton-item-checkmark {
+					&:after {
+						background: var(--color-steel-400);
+					}
+				}
+			}
+			cursor: default;
+		}
+	}
+	.patternlib-radiobutton-item-checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 28px;
+		width: 28px;
+		box-sizing: border-box;
+		border: 1px solid var(--color-black);
+		background-color: var(--color-white);
+		border-radius: 50%;
+		&:after {
+			content: "";
+			position: absolute;
+			display: none;
+			top: 5px;
+			left: 5px;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background: var(--radiobutton-item-checkmark-bg-color, var(--color-yellow));
+		}
+	}
+	.patternlib-radiobutton-item-container-disabled {
+		color: var(--color-steel-400) !important;
+		cursor: default;
+	}
+	.patternlib-radiobutton-item-checkmark-disabled {
+		border: 1px solid var(--color-steel-400) !important;
+		&:after {
+			opacity: 0.3;
+		}
+	}
+	.patternlib-radiobutton-item-container-error {
+		color: var(--color-warning);
+	}
+	.patternlib-radiobutton-item-checkmark-error {
+		border: 2px solid var(--color-warning);
+		&:after {
+			top: 4px;
+			left: 4px;
+		}
+	}
+	.patternlib-radiobutton-item-container-success {
+		color: var(--color-success);
+	}
+	.patternlib-radiobutton-item-checkmark-success {
+		border: 2px solid var(--color-success);
+		&:after {
+			top: 4px;
+			left: 4px;
+		}
+	}
+}
+.patternlib-searchbox {
+	position: relative;
+	text-align: left;
+	label {
+		font-size: var(--size-font-copy-bold-small);
+		font-family: var(--font-liebherr-head-regular);
+		font-weight: 600;
+		line-height: 20px;
+	}
+	.patternlib-searchbox-input-container {
+		position: relative;
+		input {
+			font-size: var(--size-font-copy-regular);
+			font-family: var(--font-liebherr-text-regular);
+		}
+		.patternlib-searchbox-input-default {
+			box-sizing: border-box;
+			padding: 0 20px;
+			width: 100%;
+			border-radius: 0;
+			border: 1px solid var(--color-black);
+			&:hover {
+				border: 1px solid var(--color-steel-500);
+				&::placeholder {
+					color: var(--color-steel-600);
+				}
+			}
+			&:focus {
+				outline: none;
+				padding: 0 19px;
+				border: 2px solid var(--color-black);
+			}
+		}
+		.patternlib-searchbox-input-mobile {
+			box-sizing: border-box;
+			padding: 0;
+			width: 100%;
+			border-radius: 0;
+			border: none;
+			&:hover {
+				&::placeholder {
+					color: var(--color-steel-600);
+				}
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+		.patternlib-searchbox-icon {
+			&:not(.mobile) {
+				position: absolute;
+				z-index: 2;
+				right: 16px;
+				top: 15px;
+				cursor: pointer;
+				.patternlib-searchbox-remove-icon {
+					right: 45px;
+				}
+			}
+			position: absolute;
+			z-index: 2;
+			right: 11px;
+			top: 5px;
+			cursor: pointer;
+		}
+		.patternlib-searchbox-size-small {
+			&:not(.mobile) {
+				top: 11px;
+			}
+			top: -1px;
+		}
+		&::placeholder {
+			font-size: var(--size-font-copy-regular);
+			color: var(--color-steel-800);
+		}
+		&:-moz-placeholder {
+			color: var(--color-steel-800);
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: var(--color-steel-800);
+			opacity: 1;
+		}
+		&::-webkit-input-placeholder {
+			color: var(--color-steel-800);
+		}
+	}
+	.readonly {
+		.patternlib-searchbox-input-default {
+			border: 1px solid var(--color-steel-300);
+			background-color: var(--color-steel-100);
+			cursor: default;
+		}
+		&::placeholder {
+			color: var(--color-steel-400);
+		}
+		&:-moz-placeholder {
+			color: var(--color-steel-400);
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: var(--color-steel-400);
+			opacity: 1;
+		}
+		&::-webkit-input-placeholder {
+			color: var(--color-steel-400);
+		}
+	}
+}
+.patternlib-sidebar-host {
+	display: inline;
+}
+.patternlib-sidebar-host.corporate-theme {
+	--sidebar-item-background-color: var(--color-yellow);
+	--sidebar-item-background-color-whilehover: var(--color-clay-light);
+	--sidebar-item-font-color: var(--color-black);
+	--sidebar-item-font-color-whilehover: var(--color-black);
+	--sidebar-item-border-color-onactive: var(--color-yellow);
+	--sidebar-item-border-color-whilehover: var(--color-clay-light);
+}
+.patternlib-sidebar-host.hau-theme {
+	--sidebar-item-background-color: var(--color-blue);
+	--sidebar-item-background-color-whilehover: var(--color-artic-blue);
+	--sidebar-item-font-color: var(--color-white);
+	--sidebar-item-font-color-whilehover: var(--color-white);
+	--sidebar-item-border-color-onactive: var(--color-blue);
+	--sidebar-item-border-color-whilehover: var(--color-artic-blue);
+}
+.patternlib-sidebar-container {
+	display: block;
+	position: relative;
+	height: 100%;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background: var(--color-white);
+	box-shadow: var(--shadow-elevation-basic);
+	z-index: 25;
+	span {
+		line-height: 1.3;
+	}
+	ul {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		background: var(--color-white);
+		margin: 0;
+		padding: 0;
+		li {
+			.patternlib-sidebar-item {
+				box-sizing: border-box;
+				text-decoration: none;
+				color: var(--color-black);
+				font-family: var(--font-liebherr-text-bold);
+				font-size: var(--size-font-copy-bold-smaller);
+				letter-spacing: var(--letter-spacing-basic);
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				height: 80px;
+				background: var(--color-white);
+				margin: 0;
+				padding: 0;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				text-transform: uppercase;
+				&:hover {
+					&:not(.disabled) {
+						&:not(.active) {
+							background: var(--sidebar-item-background-color-whileHover, var(--color-clay-light));
+							border-color: var(--sidebar-item-border-color-whileHover, var(--color-clay-light));
+							.patternlib-sidebar-label-container {
+								display: flex !important;
+								background: var(--sidebar-item-background-color-whileHover, var(--color-clay-light));
+								border-color: var(--sidebar-item-border-color-whileHover, var(--color-clay-light));
+							}
+							.patternlib-sidebar-icon {
+								border-color: var(--sidebar-item-border-color-whileHover, var(--color-clay-light));
+							}
+							* {
+								color: var(--sidebar-item-font-color-whileHover, var(--color-black));
+							}
+						}
+					}
+				}
+				&:active {
+					&:not(.disabled) {
+						&:not(.active) {
+							background: var(--color-black);
+							border-color: var(--color-black);
+							.patternlib-sidebar-label-container {
+								background: var(--color-black);
+								border-color: var(--color-black);
+							}
+							.patternlib-sidebar-icon {
+								border-color: var(--color-black);
+							}
+							* {
+								color: var(--color-white);
+							}
+						}
+					}
+				}
+				.patternlib-sidebar-label-container {
+					box-sizing: border-box;
+					justify-content: flex-start;
+					align-items: flex-start;
+					width: auto;
+					height: 80px;
+					background: none;
+					text-align: left;
+					border-bottom: 1px solid var(--color-steel-200);
+					.patternlib-sidebar-label-wrapper {
+						min-width: 96px;
+						height: 80px;
+						display: grid;
+						grid-template-columns: 1fr auto;
+						align-items: center;
+						.patternlib-sidebar-label {
+							display: flex;
+							justify-content: flex-start;
+							align-items: center;
+							height: 80px;
+						}
+					}
+					.expand-subitems-icon {
+						width: 80px;
+						height: 80px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+					.patternlib-sidebar-subitems-flyout {
+						box-shadow: var(--shadow-elevation-middle);
+						ul {
+							li {
+								padding: 0px 32px;
+								background: var(--color-white);
+								a {
+									display: grid;
+									grid-template-columns: auto 1fr;
+									gap: 16px;
+									width: 100%;
+									height: 80px;
+									white-space: nowrap;
+									align-items: center;
+									* {
+										color: var(--color-black) !important;
+										text-align: left;
+									}
+								}
+								&:hover {
+									background-color: var(--color-steel-100) !important;
+								}
+							}
+						}
+					}
+				}
+				.patternlib-sidebar-icon {
+					box-sizing: border-box;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 80px;
+					height: 80px;
+					border-bottom: 1px solid var(--color-steel-200);
+				}
+			}
+			.patternlib-sidebar-item.active {
+				.patternlib-sidebar-label-container {
+					background: var(--sidebar-item-background-color, var(--color-yellow));
+					border-color: var(--sidebar-item-border-color-onActive, var(--color-yellow));
+				}
+				&:hover {
+					.patternlib-sidebar-label-container {
+						display: flex !important;
+					}
+				}
+				.patternlib-sidebar-icon {
+					border-color: var(--sidebar-item-border-color-onActive, var(--color-yellow));
+				}
+				background: var(--sidebar-item-background-color, var(--color-yellow));
+				border-color: var(--sidebar-item-border-color-onActive, var(--color-yellow));
+				* {
+					color: var(--sidebar-item-font-color, var(--color-black));
+				}
+			}
+			.patternlib-sidebar-item.disabled {
+				opacity: 0.4;
+				cursor: default;
+			}
+			.patternlib-sidebar-subitems {
+				font-family: var(--font-liebherr-text-bold);
+				font-size: var(--size-font-copy-bold-smaller);
+				letter-spacing: var(--letter-spacing-basic);
+				text-transform: uppercase;
+				cursor: pointer;
+				ul {
+					li {
+						padding: 0 24px 0 48px;
+						background: var(--color-white);
+						border-bottom: 1px solid var(--color-steel-200);
+						a {
+							display: grid;
+							grid-template-columns: auto 1fr;
+							gap: 24px;
+							width: 100%;
+							height: 80px;
+							align-items: center;
+							white-space: nowrap;
+							text-align: left;
+							* {
+								color: var(--color-black) !important;
+							}
+						}
+						&:hover {
+							background-color: var(--color-steel-100) !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	.patternlib-sidebar-wrapper {
+		overflow-y: auto;
+		overflow-x: hidden;
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+		&::-webkit-scrollbar-track {
+			background: inherit;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: rgba(0, 0, 0, 0);
+		}
+		&:hover {
+			&::-webkit-scrollbar-thumb {
+				background: var(--color-steel-700) !important;
+			}
+			&::-webkit-scrollbar {
+				width: 4px;
+			}
+		}
+	}
+	.patternlib-sidebar-avatar-container {
+		width: 80px;
+		height: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.patternlib-sidebar-user-name {
+		font-family: var(--font-liebherr-text-bold);
+		font-size: var(--size-font-copy-bold);
+		div {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+	.patternlib-sidebar-user-info {
+		font-family: var(--font-liebherr-text-regular);
+		font-size: var(--size-font-copy-regular-small);
+		div {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+}
+.patternlib-slider-host {
+	display: block;
+	padding: 10px;
+}
+.patternlib-slider-host.corporate-theme {
+	--thumb-background-color-whilehover: var(--color-yellow);
+	--thumb-background-color-whileactive: var(--color-clay-light);
+}
+.patternlib-slider-host.hau-theme {
+	--thumb-background-color-whilehover: var(--color-blue);
+	--thumb-background-color-whileactive: var(--color-artic-blue);
+}
+.patternlib-slider {
+	position: relative;
+	width: 100%;
+	cursor: pointer;
+	.track {
+		height: 3px;
+		border-top: 8px solid var(--color-white);
+		border-bottom: 8px solid var(--color-white);
+	}
+	.thumb {
+		position: absolute;
+		top: -3px;
+		border-radius: 50%;
+		background: var(--color-black);
+		height: 20px;
+		width: 20px;
+		border: 2px solid var(--color-steel-100);
+		&:hover {
+			background: var(--thumb-background-color-whileHover, var(--color-yellow));
+		}
+		&:active {
+			background: var(--thumb-background-color-whileActive, var(--color-clay-light));
+		}
+	}
+}
+.patternlib-spinner-host {
+	display: block;
+}
+.patternlib-spinner-host.corporate-theme {
+	--spinner-indeterminate-outer-color: var(--color-yellow);
+	--spinner-determinate-circle-color: var(--color-yellow);
+}
+.patternlib-spinner-host.hau-theme {
+	--spinner-indeterminate-outer-color: var(--color-blue);
+	--spinner-determinate-circle-color: var(--color-blue);
+}
+.patternlib-spinner-indeterminate-container {
+	position: relative;
+	width: 58px;
+	height: 58px;
+	.patternlib-spinner-indeterminate-outer {
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		width: 52px;
+		height: 52px;
+		.patternlib-spinner-indeterminate-outer-rotate {
+			animation: rotationOuter 1.75s infinite ease-in-out;
+		}
+		svg {
+			path {
+				fill: var(--spinner-indeterminate-outer-color, var(--color-steel-200)) !important;
+			}
+		}
+	}
+	.patternlib-spinner-indeterminate-inner {
+		position: absolute;
+		top: 14px;
+		left: 14px;
+		width: 30px;
+		height: 30px;
+		.patternlib-spinner-indeterminate-inner-rotate {
+			animation: rotationInner 1.75s infinite ease-in-out;
+		}
+		svg {
+			path {
+				fill: var(--color-black) !important;
+			}
+		}
+	}
+}
+.patternlib-spinner-determinate-container {
+	position: relative;
+	.patternlib-spinner-determinate-background {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.patternlib-spinner-determinate-progress {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		circle {
+			stroke: var(--spinner-determinate-circle-color, var(--color-yellow)) !important;
+			transform: rotate(-90deg);
+			transform-origin: 50% 50%;
+		}
+	}
+	.patternlib-spinner-determinate-countup {
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: var(--font-liebherr-head-regular);
+		font-size: 18px;
+		color: var(--color-black);
+		cursor: default;
+	}
+}
+.patternlib-sticky-sidebar-host {
+	display: block;
+}
+.patternlib-sticky-sidebar-host.corporate-theme {
+	--sticky-sidebar-item-background-color: var(--color-yellow);
+	--sticky-sidebar-item-background-color-whilehover: var(--color-steel-200);
+	--sticky-sidebar-item-font-color: var(--color-black);
+}
+.patternlib-sticky-sidebar-host.hau-theme {
+	--sticky-sidebar-item-background-color: var(--color-blue);
+	--sticky-sidebar-item-background-color-whilehover: var(--color-steel-200);
+	--sticky-sidebar-item-font-color: var(--color-white);
+}
+.patternlib-sticky-sidebar-container {
+	display: block;
+	position: absolute;
+	right: 0px;
+	z-index: 25;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	ul {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		background: var(--color-steel-100);
+		margin: 0;
+		padding: 0;
+		li {
+			box-sizing: border-box;
+			border-bottom: 1px solid var(--color-steel-400);
+			&:last-child {
+				border: none;
+			}
+			.patternlib-sticky-sidebar-item {
+				text-decoration: none;
+				color: var(--color-black);
+				font-family: var(--font-liebherr-text-regular);
+				font-size: var(--size-font-copy-regular-small);
+				letter-spacing: var(--letter-spacing-basic);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				background: var(--color-steel-100);
+				margin: 0;
+				padding: 0;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				text-transform: uppercase;
+				width: 90px;
+				min-height: 90px;
+				&:hover {
+					background: var(--sticky-sidebar-item-background-color-whileHover, var(--color-steel-200));
+				}
+				&:active {
+					background: var(--sticky-sidebar-item-background-color, var(--color-yellow));
+					color: var(--sticky-sidebar-item-font-color);
+				}
+				.patternlib-sticky-sidebar-label-container {
+					width: 100%;
+					margin-bottom: 12px;
+					.patternlib-sticky-sidebar-label {
+						text-align: center;
+						padding: 6px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+				.patternlib-sticky-sidebar-icon {
+					box-sizing: border-box;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin: 16px 0 6px 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.patternlib-storytabs {
+	display: inline-flex;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.patternlib-storytabs-vertical {
+	display: block;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.patternlib-storytabs-item {
+	font-family: var(--font-liebherr-head-regular);
+	font-size: var(--size-font-copy-regular);
+	font-weight: 700;
+	color: var(--color-steel-800);
+	line-height: 28px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+.patternlib-storytabs-item-horizontal {
+	.patternlib-storytabs-item-divider {
+		width: 100%;
+		margin: 2px 0 9px 0;
+		border-top: 2px solid var(--color-steel-400);
+	}
+}
+.patternlib-storytabs-item-vertical {
+	display: flex;
+	align-items: center;
+	.patternlib-storytabs-item-id {
+		width: 20px;
+	}
+	.patternlib-storytabs-item-divider-vertical {
+		height: 42px;
+		margin: 0 20px 0 12px;
+		border-left: 2px solid var(--color-steel-400);
+	}
+}
+.patternlib-storytabs-item-default {
+	color: var(--color-steel-800);
+	.patternlib-storytabs-item-divider {
+		border-top: 2px solid var(--color-steel-400);
+	}
+	.patternlib-storytabs-item-divider-vertical {
+		border-left: 2px solid var(--color-steel-400);
+	}
+	&:hover {
+		color: var(--color-steel-600);
+		.patternlib-storytabs-item-divider {
+			border-top: 2px solid var(--color-steel-200);
+		}
+		.patternlib-storytabs-item-divider-vertical {
+			border-left: 2px solid var(--color-steel-200);
+		}
+	}
+}
+.patternlib-storytabs-item-active {
+	color: var(--color-black);
+	.patternlib-storytabs-item-divider {
+		border-top: 2px solid var(--color-black);
+	}
+	.patternlib-storytabs-item-divider-vertical {
+		border-left: 2px solid var(--color-black);
+	}
+}
+.patternlib-storytabs-item-disabled {
+	color: var(--color-steel-400);
+	cursor: default;
+	.patternlib-storytabs-item-divider {
+		border-top: 2px solid var(--color-steel-400);
+	}
+	.patternlib-storytabs-item-divider-vertical {
+		border-left: 2px solid var(--color-steel-400);
+	}
+}
+.patternlib-storytabs-item-success {
+	color: var(--color-success);
+	.patternlib-storytabs-item-divider {
+		border-top: 2px solid var(--color-success);
+	}
+	.patternlib-storytabs-item-divider-vertical {
+		border-left: 2px solid var(--color-success);
+	}
+}
+.patternlib-storytabs-item-error {
+	color: var(--color-warning);
+	.patternlib-storytabs-item-divider {
+		border-top: 2px solid var(--color-warning);
+	}
+	.patternlib-storytabs-item-divider-vertical {
+		border-left: 2px solid var(--color-warning);
+	}
+}
+.patternlib-table-cell-host {
+	display: block;
+}
+.patternlib-table {
+	position: relative;
+	width: 100%;
+	overflow-x: auto;
+	.patternlib-table-top {
+		min-width: 718px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: var(--color-black);
+		font-family: var(--font-liebherr-head-black);
+		font-weight: 900;
+		padding: 0 20px;
+		height: 70px;
+		font-size: var(--size-font-h-5-head-black);
+		border-left: 1px solid var(--color-steel-300);
+		border-right: 1px solid var(--color-steel-300);
+		border-top: 1px solid var(--color-steel-300);
+		background-color: var(--color-steel-100);
+	}
+	table {
+		font-family: var(--font-liebherr-text-regular);
+		border-collapse: collapse;
+		width: 100%;
+		min-width: 760px;
+		table-layout: fixed;
+		.patternlib-table-section-header {
+			th {
+				font-weight: 700;
+				color: var(--color-black);
+			}
+		}
+	}
+	td {
+		border: 1px solid var(--color-steel-300);
+		text-align: left;
+		font-weight: 300;
+		font-size: var(--size-font-copy-regular);
+		overflow-wrap: break-word;
+		padding: 0 20px;
+		cursor: pointer;
+		color: var(--color-black);
+		height: 70px;
+		box-sizing: border-box;
+	}
+	th {
+		border: 1px solid var(--color-steel-300);
+		text-align: left;
+		font-weight: 300;
+		font-size: var(--size-font-copy-regular);
+		overflow-wrap: break-word;
+		color: var(--color-black);
+		padding: 6px 14px 4px 20px;
+		height: 50px;
+		box-sizing: border-box;
+		background-color: var(--color-steel-100);
+	}
+	thead {
+		th {
+			.patternlib-table-header-main-row {
+				display: inline-flex;
+				justify-content: space-between;
+				width: 100%;
+				.patternlib-table-header-main-row-left {
+					display: inline-flex;
+				}
+			}
+			.patternlib-table-header-arrow-icon {
+				display: flex;
+				align-items: center;
+				padding: 0 0 1px 2px;
+				width: 20px;
+				min-height: 18px;
+			}
+			.patternlib-table-header-icon {
+				z-index: 2;
+				cursor: pointer;
+				padding: 0;
+				position: relative;
+				background-color: var(--color-steel-100);
+				border: 0;
+				outline: 0;
+				.patternlib-table-header-flyout-menu {
+					position: absolute;
+					top: 40px;
+					left: -16px;
+					min-width: 180px;
+					background-color: var(--color-white);
+					box-shadow: 0px 10px 50px #bdc4ca;
+					padding: 16px 0;
+					.flyout-menu-wrapper {
+						&:after {
+							content: "";
+							position: absolute;
+							top: 0;
+							left: 26px;
+							margin-top: -24px;
+							margin-left: -12px;
+							border-width: 12px;
+							border-style: solid;
+							border-color: transparent transparent var(--color-white) transparent;
+						}
+					}
+					.patternlib-table-header-flyout-item {
+						font-weight: 700;
+						font-size: var(--size-font-copy-regular);
+						font-family: var(--font-liebherr-text-regular);
+						color: var(--color-black);
+						padding: 7px 20px;
+						text-align: left;
+						&:hover {
+							background-color: var(--color-steel-100);
+						}
+					}
+				}
+			}
+		}
+		.patternlib-table-header-filter-row {
+			padding: 10px 20px;
+		}
+	}
+	tr {
+		&:hover {
+			background-color: var(--color-steel-100);
+		}
+	}
+	.left-border {
+		border-left: 4px solid #ffffff;
+	}
+	.patternlib-table-pagination {
+		height: 78px;
+		min-width: 718px;
+		background-color: var(--color-steel-100);
+		border: 1px solid var(--color-steel-300);
+		border-top: 0;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.patternlib-table-pagination-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.patternlib-table-pagination-pages {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.patternlib-table-pagination-page-placeholder {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.patternlib-table-pagination-dot-placeholder {
+					font-weight: bold;
+				}
+			}
+			.patternlib-table-pagination-page-item {
+				margin: 0 5px;
+				width: 36px;
+				height: 36px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			.patternlib-table-pagination-page-item.active {
+				font-weight: bold;
+				color: var(--color-white);
+				background-color: var(--color-black);
+			}
+		}
+		.patternlib-table-pagination-button {
+			cursor: pointer;
+			color: var(--color-black);
+			background-color: var(--color-steel-100);
+			border: 0;
+			outline: none;
+		}
+		.patternlib-table-pagination-button-disabled {
+			color: var(--color-steel-300);
+			cursor: not-allowed;
+		}
+		button {
+			&:first-child {
+				margin-right: 24px;
+				svg {
+					-webkit-transform: rotate(90deg);
+					-moz-transform: rotate(90deg);
+					-o-transform: rotate(90deg);
+					transform: rotate(90deg);
+				}
+			}
+			&:last-child {
+				margin-left: 24px;
+				svg {
+					-webkit-transform: rotate(270deg);
+					-moz-transform: rotate(270deg);
+					-o-transform: rotate(270deg);
+					transform: rotate(270deg);
+				}
+			}
+		}
+		.patternlib-table-pagination-notation {
+			line-height: 24px;
+			font-size: var(--size-font-copy-regular-small);
+			color: var(--color-black);
+			font-family: var(--font-liebherr-text-regular);
+			font-weight: normal;
+		}
+	}
+}
+.patternlib-table.no-grid-lines {
+	table {
+		tr {
+			td {
+				&:not(:first-child) {
+					border-width: 0 0 1px 0 !important;
+				}
+				&:first-child {
+					border-width: 0 0 1px 1px !important;
+				}
+				&:last-child {
+					border-width: 0 1px 1px 0 !important;
+				}
+			}
+			th {
+				&:not(:first-child) {
+					border-width: 1px 0 1px 0 !important;
+				}
+				&:first-child {
+					border-width: 1px 0 1px 1px !important;
+				}
+				&:last-child {
+					border-width: 1px 1px 1px 0 !important;
+				}
+			}
+		}
+	}
+}
+
+.patternlib-tabs-host {
+	display: block;
+}
+.patternlib-tabs-host.corporate-theme {
+	--tab-item-border-color: var(--color-yellow);
+}
+.patternlib-tabs-host.hau-theme {
+	--tab-item-border-color: var(--color-blue);
+}
+.tab-container {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: flex;
+	padding: 0;
+}
+.tab-container.small {
+	height: 42px;
+}
+.tab-container.big {
+	height: 52px;
+}
+.tab-item {
+	border: 0;
+	font-family: var(--font-liebherr-text-bold);
+	font-size: var(--size-font-copy-bold-small);
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: var(--letter-spacing-basic);
+	background: inherit;
+	color: var(--color-steel-800);
+	padding: 8px 0 8px 0;
+	margin: 0 16px 0 16px;
+	outline: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	border-bottom: 2px solid;
+	border-color: rgba(0, 0, 0, 0);
+	text-transform: uppercase;
+	&:hover {
+		&:not(:disabled) {
+			&:not(.active) {
+				color: var(--color-steel-600);
+			}
+		}
+	}
+	&:active {
+		&:not(:disabled) {
+			&:not(.active) {
+				background: var(--color-steel-100);
+				color: var(--color-steel-800);
+			}
+		}
+	}
+	&:disabled {
+		opacity: 0.4;
+		cursor: default;
+	}
+}
+.tab-item.active {
+	color: var(--color-black);
+	border-color: var(--tab-item-border-color, var(--color-black));
+}
+.patternlib-textarea-host {
+	font-family: var(--font-liebherr-text-regular);
+}
+.patternlib-textarea {
+	position: relative;
+	text-align: left;
+	.patternlib-textarea-label {
+		font-size: var(--size-font-copy-bold-small);
+		font-family: var(--font-liebherr-head-regular);
+		font-weight: 600;
+	}
+	textarea {
+		font-size: var(--size-font-copy-regular);
+		font-family: var(--font-liebherr-text-regular);
+	}
+	.patternlib-textarea-input {
+		box-sizing: border-box;
+		padding: 14px 20px;
+		width: 100%;
+		border-radius: 0;
+		border: 1px solid var(--color-black);
+		&:hover {
+			border: 1px solid var(--color-steel-500);
+			&::placeholder {
+				color: var(--color-steel-600);
+			}
+		}
+		&:focus {
+			&:not(:read-only) {
+				outline: none;
+				padding: 13px 19px;
+				border: 2px solid var(--color-black);
+			}
+			&:read-only {
+				padding: 14px 20px;
+				outline: none;
+			}
+		}
+	}
+	&::placeholder {
+		color: var(--color-steel-800);
+	}
+	&:-moz-placeholder {
+		color: var(--color-steel-800);
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: var(--color-steel-800);
+		opacity: 1;
+	}
+	&::-webkit-input-placeholder {
+		color: var(--color-steel-800);
+	}
+	.patternlib-textarea-status {
+		font-size: var(--size-font-copy-regular-smaller);
+		line-height: 24px;
+		font-family: var(--font-liebherr-text-regular);
+	}
+}
+.patternlib-textarea-status-error {
+	.patternlib-textarea-input {
+		border: 1px solid var(--color-warning);
+		&:hover {
+			border: 1px solid var(--color-warning);
+		}
+		&:focus {
+			padding: 13px 19px;
+			border: 2px solid var(--color-warning) !important;
+		}
+	}
+	.patternlib-textarea-status {
+		color: var(--color-warning);
+	}
+}
+.patternlib-textarea-status-success {
+	.patternlib-textarea-input {
+		border: 1px solid var(--color-success);
+		&:hover {
+			border: 1px solid var(--color-success);
+		}
+		&:focus {
+			padding: 13px 19px;
+			border: 2px solid var(--color-success) !important;
+		}
+	}
+	.patternlib-textarea-status {
+		color: var(--color-success);
+	}
+}
+.patternlib-textarea-readonly {
+	.patternlib-textarea-input {
+		border: 1px solid var(--color-steel-300);
+		background-color: var(--color-steel-100);
+		&:hover {
+			border: 1px solid var(--color-steel-300);
+			&::placeholder {
+				color: var(--color-steel-400);
+			}
+		}
+		&:focus {
+			border: 1px solid var(--color-steel-300);
+			padding: 12px 20px;
+		}
+	}
+	&::placeholder {
+		color: var(--color-steel-400);
+	}
+	&:-moz-placeholder {
+		color: var(--color-steel-400);
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: var(--color-steel-400);
+		opacity: 1;
+	}
+	&::-webkit-input-placeholder {
+		color: var(--color-steel-400);
+	}
+}
+.patternlib-textinput {
+	position: relative;
+	text-align: left;
+	.patternlib-textinput-header {
+		display: flex;
+		justify-content: space-between;
+		line-height: 20px;
+		padding-bottom: 10px;
+		label {
+			font-size: var(--size-font-copy-bold-small);
+			font-family: var(--font-liebherr-head-regular);
+			font-weight: 600;
+		}
+		span {
+			font-size: var(--size-font-copy-regular-smaller);
+			color: var(--color-steel-800);
+			font-family: var(--font-liebherr-text-regular);
+		}
+	}
+	.patternlib-textinput-container {
+		position: relative;
+		input {
+			font-size: var(--size-font-copy-regular);
+			font-family: var(--font-liebherr-text-regular);
+		}
+		.patternlib-textinput-input {
+			box-sizing: border-box;
+			padding: 0 20px;
+			width: 100%;
+			border-radius: 0;
+			border: 1px solid var(--color-black);
+			&:hover {
+				border: 1px solid var(--color-steel-500);
+				&::placeholder {
+					color: var(--color-steel-600);
+				}
+			}
+			&:focus {
+				outline: none;
+				padding: 0 19px;
+				border: 2px solid var(--color-black);
+			}
+		}
+		.patternlib-textinput-input.small {
+			height: 42px;
+		}
+		.patternlib-textinput-input.big {
+			height: 52px;
+		}
+		.patternlib-textinput-icon-remove {
+			position: absolute;
+			z-index: 1;
+			right: 16px;
+			top: 15px;
+			cursor: pointer;
+		}
+		.patternlib-textinput-icon-remove-size-small {
+			top: 10px;
+		}
+	}
+	.patternlib-textinput-status {
+		font-size: var(--size-font-copy-regular-smaller);
+		line-height: 24px;
+		font-family: var(--font-liebherr-text-regular);
+	}
+	&::placeholder {
+		font-size: var(--size-font-copy-regular);
+		color: var(--color-steel-800);
+	}
+	&:-moz-placeholder {
+		color: var(--color-steel-800);
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: var(--color-steel-800);
+		opacity: 1;
+	}
+	&::-webkit-input-placeholder {
+		color: var(--color-steel-800);
+	}
+}
+.patternlib-textinput-status-error {
+	.patternlib-textinput-container {
+		.patternlib-textinput-input {
+			border: 1px solid var(--color-warning);
+			&:hover {
+				border: 1px solid var(--color-warning);
+			}
+			&:focus {
+				padding: 0 19px;
+				border: 2px solid var(--color-warning);
+			}
+		}
+	}
+	.patternlib-textinput-status {
+		color: var(--color-warning);
+	}
+}
+.patternlib-textinput-status-success {
+	.patternlib-textinput-container {
+		.patternlib-textinput-input {
+			border: 1px solid var(--color-success);
+			&:hover {
+				border: 1px solid var(--color-success);
+			}
+			&:focus {
+				padding: 0 19px;
+				border: 2px solid var(--color-success);
+			}
+		}
+	}
+	.patternlib-textinput-status {
+		color: var(--color-success);
+	}
+}
+.patternlib-textinput-readonly {
+	.patternlib-textinput-container {
+		.patternlib-textinput-input {
+			border: 1px solid var(--color-steel-300);
+			background-color: var(--color-steel-100);
+			color: var(--color-steel-400);
+			&:hover {
+				border: 1px solid var(--color-steel-300);
+				&::placeholder {
+					color: var(--color-steel-400);
+				}
+			}
+			&:focus {
+				border: 1px solid var(--color-steel-300);
+				padding: 0 20px;
+			}
+		}
+		&::placeholder {
+			color: var(--color-steel-400);
+		}
+		&:-moz-placeholder {
+			color: var(--color-steel-400);
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: var(--color-steel-400);
+			opacity: 1;
+		}
+		&::-webkit-input-placeholder {
+			color: var(--color-steel-400);
+		}
+	}
+}
+.patternlib-textlink-host {
+	display: block;
+}
+.patternlib-textlink {
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-family: var(--font-liebherr-text-bold);
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: var(--letter-spacing-basic);
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	a {
+		color: var(--color-steel-800);
+		text-decoration: none;
+	}
+	.icon {
+		* {
+			color: var(--color-steel-800) !important;
+		}
+	}
+	.patternlib-textlink-content-wrapper-icon-and-label {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	.patternlib-textlink-content-wrapper-icon {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.patternlib-textlink-content-wrapper-label {
+		padding-bottom: 4px;
+		border-bottom: 2px solid;
+		border-color: var(--color-steel-800);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	.patternlib-textlink-icon-padding-right {
+		padding-right: 8px;
+	}
+	.patternlib-textlink-icon-padding-left {
+		padding-left: 8px;
+	}
+	&:hover {
+		cursor: pointer;
+		a {
+			color: var(--color-steel-600);
+		}
+		.patternlib-textlink-content-wrapper-label {
+			border-color: var(--color-steel-600);
+		}
+		.icon {
+			* {
+				color: var(--color-steel-600) !important;
+			}
+		}
+	}
+	&:active {
+		a {
+			color: var(--color-black);
+		}
+		.patternlib-textlink-content-wrapper-label {
+			border-color: var(--color-black);
+		}
+		.icon {
+			* {
+				color: var(--color-black) !important;
+			}
+		}
+	}
+}
+.patternlib-textlink.big {
+	font-size: var(--size-font-copy-regular-small);
+}
+.patternlib-textlink.small {
+	font-size: 14px;
+}
+.patternlib-texttoggle-host {
+	display: block;
+}
+.patternlib-texttoggle-host.corporate-theme {
+	--toggle-item-color: var(--color-yellow);
+	--toggle-item-hover-color: var(--color-clay-light);
+	--toggle-item-text-color: var(--color-black);
+}
+.patternlib-texttoggle-host.hau-theme {
+	--toggle-item-color: var(--color-blue);
+	--toggle-item-hover-color: var(--color-artic-blue);
+	--toggle-item-text-color: var(--color-white);
+}
+.patternlib-texttoggle-container {
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	width: max-content;
+	height: auto;
+	background: var(--color-white);
+	border: 1px solid var(--color-black);
+	box-sizing: border-box;
+	padding-left: 2px;
+	padding-right: 2px;
+	align-items: center;
+	&:active {
+		border: 1px solid var(--color-steel-500);
+	}
+}
+.patternlib-texttoggle-container-disabled {
+	.patternlib-texttoggle-item {
+		color: var(--color-steel-400) !important;
+	}
+	.patternlib-texttoggle-item.active {
+		background-color: var(--color-steel-100) !important;
+	}
+	.patternlib-texttoggle-container {
+		border: 1px solid var(--color-steel-400);
+		cursor: default;
+		pointer-events: none;
+	}
+}
+.patternlib-texttoggle-item {
+	border: 0;
+	font-family: var(--font-liebherr-text-bold);
+	font-size: var(--size-font-copy-bold-smaller);
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 26px;
+	letter-spacing: var(--letter-spacing-basic);
+	background: inherit;
+	color: var(--color-steel-700);
+	width: 100%;
+	margin: 4px 2px 4px 2px;
+	outline: none;
+	cursor: pointer;
+	&:hover {
+		&:not(.active) {
+			color: var(--toggle-item-text-color, var(--color-black));
+			background-color: var(--toggle-item-hover-color, var(--color-clay-light));
+		}
+	}
+}
+.patternlib-texttoggle-item.small {
+	height: 32px;
+}
+.patternlib-texttoggle-item.big {
+	height: 42px;
+}
+.patternlib-texttoggle-item.active {
+	color: var(--toggle-item-text-color, var(--color-black));
+	background-color: var(--toggle-item-color, var(--color-yellow));
+}
+.patternlib-toggle-host {
+	display: block;
+}
+.patternlib-toggle-host.corporate-theme {
+	--toggle-background-color-checked: var(--color-yellow);
+	--toggle-background-color-checked-while-hover: var(--color-clay-light);
+	--toggle-text-color-checked: var(--color-black);
+	--toggle-slider-background-color-checked: var(--color-black);
+}
+.patternlib-toggle-host.hau-theme {
+	--toggle-background-color-checked: var(--color-blue);
+	--toggle-background-color-checked-while-hover: var(--color-artic-blue);
+	--toggle-text-color-checked: var(--color-white);
+	--toggle-slider-background-color-checked: var(--color-white);
+}
+.patternlib-toggle-switch {
+	position: relative;
+	display: inline-block;
+	width: 82px;
+	height: 42px;
+	input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+		&:checked {
+			+ {
+				.patternlib-toggle-slider {
+					background-color: var(--toggle-background-color-checked, var(--color-yellow));
+					color: var(--toggle-text-color-checked, var(--color-black));
+					&:before {
+						-webkit-transform: translateX(38px);
+						-ms-transform: translateX(38px);
+						transform: translateX(38px);
+						background-color: var(--toggle-slider-background-color-checked, var(--color-black));
+					}
+				}
+			}
+		}
+		&:disabled {
+			+ {
+				.patternlib-toggle-slider {
+					background-color: var(--color-white);
+					border-color: var(--color-steel-400);
+					color: var(--color-steel-400);
+					cursor: default;
+					&:before {
+						background-color: var(--color-steel-400);
+					}
+				}
+			}
+		}
+	}
+	.patternlib-toggle-slider {
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: var(--color-white);
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+		border-radius: 21px;
+		display: flex;
+		align-items: center;
+		padding: 0 12px;
+		font-family: var(--font-liebherr-text-bold);
+		font-size: var(--size-font-copy-bold-smaller);
+		line-height: 26px;
+		letter-spacing: var(--letter-spacing-basic);
+		border: 1px solid var(--color-black);
+		color: var(--color-steel-700);
+		text-transform: uppercase;
+		&:before {
+			position: absolute;
+			content: "";
+			height: 32px;
+			width: 32px;
+			left: 5px;
+			top: 4px;
+			background-color: var(--color-black);
+			-webkit-transition: 0.4s;
+			transition: 0.4s;
+			border-radius: 50%;
+		}
+	}
+	&:hover {
+		input {
+			&:not(:checked) {
+				&:not(:disabled) {
+					+ {
+						.patternlib-toggle-slider {
+							color: var(--color-black);
+						}
+					}
+				}
+			}
+			&:checked {
+				&:not(:disabled) {
+					+ {
+						.patternlib-toggle-slider {
+							background-color: var(--toggle-background-color-checked-while-hover, var(--color-clay-light));
+						}
+					}
+				}
+			}
+		}
+	}
+	&:active {
+		input {
+			&:not(:checked) {
+				&:not(:disabled) {
+					+ {
+						.patternlib-toggle-slider {
+							border: 1px solid var(--color-steel-500);
+							color: var(--color-steel-700);
+						}
+					}
+				}
+			}
+			+ {
+				.patternlib-toggle-slider {
+					border: 1px solid var(--color-steel-500);
+				}
+			}
+		}
+	}
+}
+.patternlib-tooltip-host {
+	display: block;
+}
+.patternlib-tooltip {
+	position: relative;
+	display: inline-block;
+	.patternlib-tooltip-text {
+		visibility: hidden;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-elevation-middle);
+		color: var(--color-black);
+		padding: 10px;
+		position: absolute;
+		font-family: var(--font-liebherr-text-regular);
+		font-size: var(--size-font-copy-regular-small);
+	}
+	.patternlib-tooltip-text.arrow-top {
+		&::after {
+			content: " ";
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			margin-left: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent transparent var(--color-white) transparent;
+		}
+	}
+	.patternlib-tooltip-text.arrow-right {
+		&::after {
+			content: " ";
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			margin-top: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent transparent transparent var(--color-white);
+		}
+	}
+	.patternlib-tooltip-text.arrow-bottom {
+		&::after {
+			content: " ";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: var(--color-white) transparent transparent transparent;
+		}
+	}
+	.patternlib-tooltip-text.arrow-left {
+		&::after {
+			content: " ";
+			position: absolute;
+			top: 50%;
+			right: 100%;
+			margin-top: -12px;
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent var(--color-white) transparent transparent;
+		}
+	}
+	&:hover {
+		.patternlib-tooltip-text {
+			visibility: visible;
+		}
+	}
+}
+@media only screen and (max-width: 770px) {
+	.patternlib-footer {
+		.patternlib-footer-portal {
+			padding: 16px 60px 14px 60px;
+		}
+	}
+}
+@media only screen and (max-width: 736px) {
+	.patternlib-footer {
+		display: flex;
+		min-width: 396px;
+		.patternlib-footer-container {
+			padding: 60px 20px 20px 20px;
+			display: block;
+			.patternlib-footer-section {
+				.patternlib-footer-section-title {
+					padding-bottom: 0;
+				}
+			}
+			.patternlib-footer-additional-link {
+				display: block;
+				padding: 0 10px 0 10px;
+				.patternlib-footer-section-item {
+					line-height: 40px;
+					font-size: var(--size-font-copy-regular-smaller);
+					a {
+						text-decoration: none;
+						color: var(--color-steel-400);
+					}
+				}
+			}
+			.patternlib-footer-copyrights {
+				color: var(--color-steel-400);
+				line-height: 40px;
+				font-size: var(--size-font-copy-regular-smaller);
+				padding: 0 20px 80px 10px;
+			}
+		}
+		.patternlib-footer-bottom {
+			display: flex;
+			justify-content: space-between;
+			.patternlib-footer-arrow-icon {
+				position: relative;
+				right: 0;
+				bottom: 0px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 650px) {
+	.patternlib-footer {
+		.patternlib-footer-portal {
+			display: block;
+			padding: 40px 0px 40px 20px;
+			.patternlib-footer-portal-text {
+				display: block;
+				line-height: 40px;
+			}
+		}
+	}
+}
+
+.icon-liebherr-my-jobsite-icon-rgb-64px:before {
+	content: "\e9e9";
+  }
+  .icon-liebherr-crane-finder-icon-rgb-64px:before {
+	content: "\ea02";
+  }
+  .icon-liebherr-engine-production-icon-rgb-64px:before {
+	content: "\ea03";
+  }
+  .icon-liebherr-lidia-icon-rgb-64px:before {
+	content: "\ea04";
+  }
+  .icon-liebherr-enginge-diagnostic-icon-rgb-64px:before {
+	content: "\ea05";
+  }
+  .icon-liebherr-sport-6-icon-rgb-64px:before {
+	content: "\ea06";
+  }
+  .icon-liebherr-sport-3-icon-rgb-64px:before {
+	content: "\ea07";
+  }
+  .icon-liebherr-sport-9-icon-rgb-64px:before {
+	content: "\ea08";
+  }
+  .icon-liebherr-sport-8-icon-rgb-64px:before {
+	content: "\ea09";
+  }
+  .icon-liebherr-sport-5-icon-rgb-64px:before {
+	content: "\ea0a";
+  }
+  .icon-liebherr-sport-4-icon-rgb-64px:before {
+	content: "\ea0b";
+  }
+  .icon-liebherr-sport-7-icon-rgb-64px:before {
+	content: "\ea0c";
+  }
+  .icon-liebherr-robotics-icon-rgb-64px:before {
+	content: "\ea0d";
+  }
+  .icon-liebherr-digital-signage-icon-rgb-64px:before {
+	content: "\ea0e";
+  }
+  .icon-liebherr-user-permission-icon-rgb-64px:before {
+	content: "\ea0f";
+  }
+  .icon-liebherr-tractor-icon-rgb-64px:before {
+	content: "\ea10";
+  }
+  .icon-liebherr-smart-city-icon-rgb-64px:before {
+	content: "\ea11";
+  }
+  .icon-liebherr-plug-icon-rgb-64px:before {
+	content: "\ea4b";
+  }
+  .icon-liebherr-organization-chart-icon-rgb-64px:before {
+	content: "\ea4c";
+  }
+  .icon-liebherr-harvester-icon-rgb-64px:before {
+	content: "\ea4d";
+  }
+  .icon-liebherr-connected-fab-icon-rgb-64px:before {
+	content: "\ea4e";
+  }
+  .icon-liebherr-smart-farming-icon-rgb-64px:before {
+	content: "\ea4f";
+  }
+  .icon-liebherr-everyday-mask-icon-rgb-64px:before {
+	content: "\ea50";
+  }
+  .icon-liebherr-sport-2-icon-rgb-64px:before {
+	content: "\ea01";
+  }
+  .icon-liebherr-sport-1-icon-rgb-64px:before {
+	content: "\e9ed";
+  }
+  .icon-liebherr-lh-signal-info-icon-rgb-64px:before {
+	content: "\e9eb";
+  }
+  .icon-liebherr-lh-web-platform-icon-rgb-64px:before {
+	content: "\e9ec";
+  }
+  .icon-liebherr-cloud-icon-rgb-64px1:before {
+	content: "\e9ea";
+  }
+  .icon-liebherr-lin-icon-rgb-64px:before {
+	content: "\e9e8";
+  }
+  .icon-liebherr-bluetooth-icon-rgb-64px:before {
+	content: "\e9e7";
+  }
+  .icon-liebherr-caliper-icon-rgb-64px:before {
+	content: "\e905";
+  }
+  .icon-liebherr-stock-icon-rgb-64px:before {
+	content: "\e904";
+  }
+  .icon-liebherr-brandportal-icon-rgb-64px:before {
+	content: "\e903";
+  }
+  .icon-liebherr-components-demand-icon-rgb-64px:before {
+	content: "\e900";
+  }
+  .icon-liebherr-digital-services-MyMaintenance-remote-support-icon-rgb-64px:before {
+	content: "\e901";
+  }
+  .icon-liebherr-cage-damage-icon-rgb-64px:before {
+	content: "\e902";
+  }
+  .icon-liebherr-microphone-icon-rgb-64px:before {
+	content: "\ea00";
+  }
+  .icon-liebherr--icon-rgb:before {
+	content: "\eb11";
+  }
+  .icon-liebherr-filter-icon-rgb:before {
+	content: "\eb21";
+  }
+  .icon-liebherr-press-area-icon-rgb-64px:before {
+	content: "\eb54";
+  }
+  .icon-liebherr-arrow-left-icon-rgb-64px:before {
+	content: "\eb53";
+  }
+  .icon-liebherr-arrow-right-icon-rgb-64px:before {
+	content: "\eb52";
+  }
+  .icon-liebherr-push-icon-rgb-64px:before {
+	content: "\eb31";
+  }
+  .icon-liebherr-shuttle-bus-icon-rgb-64px:before {
+	content: "\eb32";
+  }
+  .icon-liebherr-smoking-prohibited-icon-rgb-64px:before {
+	content: "\eb33";
+  }
+  .icon-liebherr-sound-off-icon-rgb-64px:before {
+	content: "\eb34";
+  }
+  .icon-liebherr-stairs-icon-rgb-64px:before {
+	content: "\eb35";
+  }
+  .icon-liebherr-technical-room-icon-rgb-64px:before {
+	content: "\eb36";
+  }
+  .icon-liebherr-video-surveillance-icon-rgb-64px:before {
+	content: "\eb37";
+  }
+  .icon-liebherr-wardrobe-icon-rgb-64px:before {
+	content: "\eb38";
+  }
+  .icon-liebherr-with-hand-to-wipe-icon-rgb-64px:before {
+	content: "\eb39";
+  }
+  .icon-liebherr-access-control-icon-rgb-64px:before {
+	content: "\eb3a";
+  }
+  .icon-liebherr-BMZ-icon-rgb-64px:before {
+	content: "\eb3b";
+  }
+  .icon-liebherr-bus-stop-icon-rgb-64px:before {
+	content: "\eb3c";
+  }
+  .icon-liebherr-cafe-staff-only-icon-rgb-64px:before {
+	content: "\eb3d";
+  }
+  .icon-liebherr-do-not-enter-icon-rgb-64px:before {
+	content: "\eb3e";
+  }
+  .icon-liebherr-do-not-use-in-case-of-fire-icon-rgb-64px:before {
+	content: "\eb3f";
+  }
+  .icon-liebherr-entire-gesture-control-icon-rgb-64px:before {
+	content: "\eb40";
+  }
+  .icon-liebherr-entry-staff-only-icon-rgb-64px:before {
+	content: "\eb41";
+  }
+  .icon-liebherr-escalator-icon-rgb-64px:before {
+	content: "\eb42";
+  }
+  .icon-liebherr-exit-icon-rgb-64px:before {
+	content: "\eb43";
+  }
+  .icon-liebherr-floor-icon-rgb-64px:before {
+	content: "\eb44";
+  }
+  .icon-liebherr-lockers-icon-rgb-64px:before {
+	content: "\eb45";
+  }
+  .icon-liebherr-meeting-point-icon-rgb-64px:before {
+	content: "\eb46";
+  }
+  .icon-liebherr-meeting-room-icon-rgb-64px:before {
+	content: "\eb47";
+  }
+  .icon-liebherr-office-icon-rgb-64px:before {
+	content: "\eb48";
+  }
+  .icon-liebherr-orientation-system-icon-rgb-64px:before {
+	content: "\eb49";
+  }
+  .icon-liebherr-pedestrian-walkway-icon-rgb-64px:before {
+	content: "\eb4a";
+  }
+  .icon-liebherr-phoning-prohibited-icon-rgb-64px:before {
+	content: "\eb4b";
+  }
+  .icon-liebherr-photography-prohibited-icon-rgb-64px:before {
+	content: "\eb4c";
+  }
+  .icon-liebherr-pull-icon-rgb-64px:before {
+	content: "\eb4e";
+  }
+  .icon-liebherr-alpha-head-black:before {
+	content: "\eb2b";
+  }
+  .icon-liebherr-alpha-text-bold:before {
+	content: "\eb2c";
+  }
+  .icon-liebherr-alpha-text-regular:before {
+	content: "\eb2d";
+  }
+  .icon-liebherr-digital-services-MyMaintenance-icon-rgb-64px:before {
+	content: "\eb12";
+  }
+  .icon-liebherr-digital-services-troubleshoot-advisor-64px:before {
+	content: "\eb22";
+  }
+  .icon-liebherr-digital-services-icon-rgb-64px:before {
+	content: "\eb2a";
+  }
+  .icon-liebherr-digital-services-MyAssets-icon-rgb-64px:before {
+	content: "\eb2e";
+  }
+  .icon-liebherr-dashboard-icon-rgb-64px:before {
+	content: "\eb0c";
+  }
+  .icon-liebherr-confirm-message-icon-rgb-64px:before {
+	content: "\eb0d";
+  }
+  .icon-liebherr-envelope-open-icon-rgb-64px:before {
+	content: "\eb0e";
+  }
+  .icon-liebherr-load-securing-icon-rgb-64px:before {
+	content: "\eb0f";
+  }
+  .icon-liebherr-turn-off-engines-icon-rgb-64px:before {
+	content: "\eb10";
+  }
+  .icon-liebherr-filter-module-for-diesel-particles-icon-rgb-64px:before {
+	content: "\ea18";
+  }
+  .icon-liebherr-bucket-volume-icon-rgb-64px:before {
+	content: "\ea43";
+  }
+  .icon-liebherr-arrow-up-icon-rgb-64px:before {
+	content: "\ea44";
+  }
+  .icon-liebherr-arrow-down-1-icon-rgb-64px:before {
+	content: "\ea45";
+  }
+  .icon-liebherr-add-on-parts-icon-rgb-64px:before {
+	content: "\ea46";
+  }
+  .icon-liebherr-to-the-top-icon-rgb-64px:before {
+	content: "\ea47";
+  }
+  .icon-liebherr-table-icon-rgb-64px:before {
+	content: "\ea48";
+  }
+  .icon-liebherr-slider-right-icon-rgb-64px:before {
+	content: "\ea49";
+  }
+  .icon-liebherr-brushes-icon-rgb-64px:before {
+	content: "\ea4a";
+  }
+  .icon-liebherr-corrosion-damages-icon-rgb-64px:before {
+	content: "\ea70";
+  }
+  .icon-liebherr-export-icon-rgb-64px:before {
+	content: "\ea71";
+  }
+  .icon-liebherr-fire-icon-rgb-64px:before {
+	content: "\ea72";
+  }
+  .icon-liebherr-frequency-inverter-cabinet-icon-rgb-64px:before {
+	content: "\ea73";
+  }
+  .icon-liebherr-further-options-2-icon-rgb-64px:before {
+	content: "\ea74";
+  }
+  .icon-liebherr-gear-damage-icon-rgb-64px:before {
+	content: "\ea75";
+  }
+  .icon-liebherr-individualization-icon-rgb-64px:before {
+	content: "\ea76";
+  }
+  .icon-liebherr-innovative-sealings-icon-rgb-64px:before {
+	content: "\ea77";
+  }
+  .icon-liebherr-over-production-icon-rgb-64px:before {
+	content: "\ea78";
+  }
+  .icon-liebherr-oversized-processes-icon-rgb-64px:before {
+	content: "\ea79";
+  }
+  .icon-liebherr-special-fats-icon-rgb-64px:before {
+	content: "\ea7a";
+  }
+  .icon-liebherr-surface-treatment-icon-rgb-64px:before {
+	content: "\ea7d";
+  }
+  .icon-liebherr-slider-left-icon-rgb-64px:before {
+	content: "\ea7e";
+  }
+  .icon-liebherr-reparatur-icon-rgb-64px:before {
+	content: "\ea7f";
+  }
+  .icon-liebherr-recycling-plants-icon-rgb-64px:before {
+	content: "\ea80";
+  }
+  .icon-liebherr-qualifications-icon-rgb-64px:before {
+	content: "\ea81";
+  }
+  .icon-liebherr-move-icon-rgb-64px:before {
+	content: "\ea82";
+  }
+  .icon-liebherr-mixing-systems-icon-rgb-64px:before {
+	content: "\ea83";
+  }
+  .icon-liebherr-minus-icon-rgb-64px:before {
+	content: "\ea84";
+  }
+  .icon-liebherr-language-of-job-icon-rgb-64px:before {
+	content: "\ea85";
+  }
+  .icon-liebherr-joystick-icon-rgb-64px:before {
+	content: "\ea86";
+  }
+  .icon-liebherr-job-title-icon-rgb-64px:before {
+	content: "\ea87";
+  }
+  .icon-liebherr-hook-position-icon-rgb-64px:before {
+	content: "\ea88";
+  }
+  .icon-liebherr-gripper-icon-rgb-64px:before {
+	content: "\ea89";
+  }
+  .icon-liebherr-give-aways-icon-rgb-64px:before {
+	content: "\ea8a";
+  }
+  .icon-liebherr-general-overhaul-icon-rgb-64px:before {
+	content: "\ea8b";
+  }
+  .icon-liebherr-further-options-1-icon-rgb-64px:before {
+	content: "\ea8c";
+  }
+  .icon-liebherr-exchange-components-icon-rgb-64px:before {
+	content: "\ea8d";
+  }
+  .icon-liebherr-evaluation-old-part-icon-rgb-64px:before {
+	content: "\ea8e";
+  }
+  .icon-liebherr-erc-system-icon-rgb-64px:before {
+	content: "\ea8f";
+  }
+  .icon-liebherr-eiffel-tower-icon-rgb-64px:before {
+	content: "\ea90";
+  }
+  .icon-liebherr-dump-truck-icon-rgb-64px:before {
+	content: "\ea91";
+  }
+  .icon-liebherr-desinfection-icon-rgb-64px:before {
+	content: "\ea92";
+  }
+  .icon-liebherr-crane-climbing-icon-rgb-64px:before {
+	content: "\ea93";
+  }
+  .icon-liebherr-sun-icon-rgb-64px:before {
+	content: "\eaa8";
+  }
+  .icon-liebherr-waves-icon-rgb-64px:before {
+	content: "\eaa9";
+  }
+  .icon-liebherr-wind-energy-plant-icon-rgb-64px:before {
+	content: "\eaaa";
+  }
+  .icon-liebherr-5G-antenne-icon-rgb-64px:before {
+	content: "\eaab";
+  }
+  .icon-liebherr-additional-payment-icon-rgb-64px:before {
+	content: "\eaac";
+  }
+  .icon-liebherr-apple-core-icon-rgb-64px:before {
+	content: "\eaad";
+  }
+  .icon-liebherr-attractive-salary-icon-rgb-64px:before {
+	content: "\eaae";
+  }
+  .icon-liebherr-axle-oils-icon-rgb-64px:before {
+	content: "\eaaf";
+  }
+  .icon-liebherr-business-cell-phones-icon-rgb-64px:before {
+	content: "\eab0";
+  }
+  .icon-liebherr-care-packs-icon-rgb-64px:before {
+	content: "\eab1";
+  }
+  .icon-liebherr-childcare-icon-rgb-64px:before {
+	content: "\eab2";
+  }
+  .icon-liebherr-circle-arrow-clockwise-icon-rgb-64px:before {
+	content: "\eab3";
+  }
+  .icon-liebherr-cocktail-glas-1-icon-rgb-64px:before {
+	content: "\eab4";
+  }
+  .icon-liebherr-cocktail-glass-2-icon-rgb-64px:before {
+	content: "\eab5";
+  }
+  .icon-liebherr-cocktail-glass-3-icon-rgb-64px:before {
+	content: "\eab6";
+  }
+  .icon-liebherr-cocktail-glass-4-icon-rgb-64px:before {
+	content: "\eab7";
+  }
+  .icon-liebherr-company-apartments-icon-rgb-64px:before {
+	content: "\eab8";
+  }
+  .icon-liebherr-conical-flask-icon-rgb-64px:before {
+	content: "\eab9";
+  }
+  .icon-liebherr-container-vessel-icon-rgb-64px:before {
+	content: "\eaba";
+  }
+  .icon-liebherr-electrolyzer-icon-rgb-64px:before {
+	content: "\eabb";
+  }
+  .icon-liebherr-empowerment-icon-rgb-64px:before {
+	content: "\eabc";
+  }
+  .icon-liebherr-engine-oils-icon-rgb-64px:before {
+	content: "\eabd";
+  }
+  .icon-liebherr-ergonomic-equipment-icon-rgb-64px:before {
+	content: "\eabe";
+  }
+  .icon-liebherr-family-and-work-icon-rgb-64px:before {
+	content: "\eabf";
+  }
+  .icon-liebherr-fats-icon-rgb-64px:before {
+	content: "\eac0";
+  }
+  .icon-liebherr-gear-oils-icon-rgb-64px:before {
+	content: "\eac1";
+  }
+  .icon-liebherr-goods-incoming-icon-rgb-64px:before {
+	content: "\eac2";
+  }
+  .icon-liebherr-goods-outgoing-icon-rgb-64px:before {
+	content: "\eac3";
+  }
+  .icon-liebherr-home-office-icon-rgb-64px:before {
+	content: "\eac4";
+  }
+  .icon-liebherr-hydraulic-oils-icon-rgb-64px:before {
+	content: "\eac5";
+  }
+  .icon-liebherr-identity-secured-icon-rgb-64px:before {
+	content: "\eac6";
+  }
+  .icon-liebherr-initiative-application-icon-rgb-64px:before {
+	content: "\eac7";
+  }
+  .icon-liebherr-innovations-icon-rgb-64px:before {
+	content: "\eac8";
+  }
+  .icon-liebherr-IP-icon-rgb-64px:before {
+	content: "\eac9";
+  }
+  .icon-liebherr-jobcenter-icon-rgb-64px:before {
+	content: "\eaca";
+  }
+  .icon-liebherr-lubricants-icon-rgb-64px:before {
+	content: "\eacb";
+  }
+  .icon-liebherr-LVT-icon-rgb-64px:before {
+	content: "\eacc";
+  }
+  .icon-liebherr-management-cockpit-icon-rgb-64px:before {
+	content: "\eacd";
+  }
+  .icon-liebherr-modern-workplace-production-icon-rgb-64px:before {
+	content: "\eace";
+  }
+  .icon-liebherr-money-liquidity-icon-rgb-64px:before {
+	content: "\eacf";
+  }
+  .icon-liebherr-money-secured-icon-rgb-64px:before {
+	content: "\ead0";
+  }
+  .icon-liebherr-monorail-icon-rgb-64px:before {
+	content: "\ead1";
+  }
+  .icon-liebherr-news-icon-rgb-64px:before {
+	content: "\ead2";
+  }
+  .icon-liebherr-NFC-RFID-icon-rgb-64px:before {
+	content: "\ead3";
+  }
+  .icon-liebherr-package-icon-rgb-64px:before {
+	content: "\ead4";
+  }
+  .icon-liebherr-pc-icon-rgb-64px:before {
+	content: "\ead5";
+  }
+  .icon-liebherr-productivity-icon-rgb-64px:before {
+	content: "\ead6";
+  }
+  .icon-liebherr-profitability-icon-rgb-64px:before {
+	content: "\ead7";
+  }
+  .icon-liebherr-reman-programm-icon-rgb-64px:before {
+	content: "\ead8";
+  }
+  .icon-liebherr-rss-feed-frame-icon-rgb-64px:before {
+	content: "\ead9";
+  }
+  .icon-liebherr-rss-feed-icon-rgb-64px:before {
+	content: "\eada";
+  }
+  .icon-liebherr-satellite-icon-rgb-64px:before {
+	content: "\eadb";
+  }
+  .icon-liebherr-screw-paste-icon-rgb-64px:before {
+	content: "\eadc";
+  }
+  .icon-liebherr-solar-panel-icon-rgb-64px:before {
+	content: "\eadd";
+  }
+  .icon-liebherr-spray-hot-surfaces-icon-rgb-64px:before {
+	content: "\eade";
+  }
+  .icon-liebherr-spray-hydraulic-cylinder-icon-rgb-64px:before {
+	content: "\eadf";
+  }
+  .icon-liebherr-spray-icon-rgb-64px:before {
+	content: "\eae0";
+  }
+  .icon-liebherr-star-plus-icon-rgb-64px:before {
+	content: "\eae1";
+  }
+  .icon-liebherr-dinner-icon-rgb-64px:before {
+	content: "\eae2";
+  }
+  .icon-liebherr-document2-icon-rgb-64px:before {
+	content: "\eae3";
+  }
+  .icon-liebherr-elevator-icon-rgb-64px:before {
+	content: "\eae4";
+  }
+  .icon-liebherr-entrance-icon-rgb-64px:before {
+	content: "\eae5";
+  }
+  .icon-liebherr-heart-icon-rgb-64px:before {
+	content: "\eae6";
+  }
+  .icon-liebherr-helicopter-icon-rgb-64px:before {
+	content: "\eae7";
+  }
+  .icon-liebherr-home-icon-rgb-64px:before {
+	content: "\eae8";
+  }
+  .icon-liebherr-info-person-icon-rgb-64px:before {
+	content: "\eae9";
+  }
+  .icon-liebherr-lock-closed-icon-rgb-64px:before {
+	content: "\eaea";
+  }
+  .icon-liebherr-lock-open-icon-rgb-64px:before {
+	content: "\eaeb";
+  }
+  .icon-liebherr-man-icon-rgb-64px:before {
+	content: "\eaec";
+  }
+  .icon-liebherr-map-icon-rgb-64px:before {
+	content: "\eaed";
+  }
+  .icon-liebherr-map-location-icon-rgb-64px:before {
+	content: "\eaee";
+  }
+  .icon-liebherr-parking-icon-rgb-64px:before {
+	content: "\eaef";
+  }
+  .icon-liebherr-question-mark-icon-rgb-64px:before {
+	content: "\eaf0";
+  }
+  .icon-liebherr-rack-icon-rgb-64px:before {
+	content: "\eaf1";
+  }
+  .icon-liebherr-service-desk-icon-rgb-64px:before {
+	content: "\eaf2";
+  }
+  .icon-liebherr-share-icon-rgb-64px:before {
+	content: "\eaf3";
+  }
+  .icon-liebherr-shower-men-icon-rgb-64px:before {
+	content: "\eaf4";
+  }
+  .icon-liebherr-shower-women-icon-rgb-64px:before {
+	content: "\eaf5";
+  }
+  .icon-liebherr-signpost-icon-rgb-64px:before {
+	content: "\eaf6";
+  }
+  .icon-liebherr-spare-parts-shipping-icon-rgb-64px:before {
+	content: "\eaf7";
+  }
+  .icon-liebherr-target-icon-rgb-64px:before {
+	content: "\eaf8";
+  }
+  .icon-liebherr-taxi-icon-rgb-64px:before {
+	content: "\eaf9";
+  }
+  .icon-liebherr-toilets-icon-rgb-64px:before {
+	content: "\eafa";
+  }
+  .icon-liebherr-train-icon-rgb-64px:before {
+	content: "\eafb";
+  }
+  .icon-liebherr-underground-icon-rgb-64px:before {
+	content: "\eafc";
+  }
+  .icon-liebherr-wardrobe-men-icon-rgb-64px:before {
+	content: "\eafd";
+  }
+  .icon-liebherr-wardrobe-women-icon-rgb-64px:before {
+	content: "\eafe";
+  }
+  .icon-liebherr-wheelchair-icon-rgb-64px:before {
+	content: "\eaff";
+  }
+  .icon-liebherr-wifi-icon-rgb-64px:before {
+	content: "\eb00";
+  }
+  .icon-liebherr-woman-icon-rgb-64px:before {
+	content: "\eb01";
+  }
+  .icon-liebherr-wrench-icon-rgb-64px:before {
+	content: "\eb02";
+  }
+  .icon-liebherr-app-android-icon-rgb-64px:before {
+	content: "\eb03";
+  }
+  .icon-liebherr-arrow-up-down-icon-rgb-64px:before {
+	content: "\eb04";
+  }
+  .icon-liebherr-bike-icon-rgb-64px:before {
+	content: "\eb05";
+  }
+  .icon-liebherr-bus-icon-rgb-64px:before {
+	content: "\eb06";
+  }
+  .icon-liebherr-cardhouse-icon-rgb-64px:before {
+	content: "\eb07";
+  }
+  .icon-liebherr-car-icon-rgb-64px:before {
+	content: "\eb08";
+  }
+  .icon-liebherr-cleaning-icon-rgb-64px:before {
+	content: "\eb09";
+  }
+  .icon-liebherr-cup-icon-rgb-64px:before {
+	content: "\eb0a";
+  }
+  .icon-liebherr-delivery-truck-icon-rgb-64px:before {
+	content: "\eb0b";
+  }
+  .icon-liebherr-service-center-icon-rgb-64px:before {
+	content: "\e922";
+  }
+  .icon-liebherr-shackle-icon-rgb-64px:before {
+	content: "\e97e";
+  }
+  .icon-liebherr-shaking-hands-prohibited-icon-rgb-64px:before {
+	content: "\e99b";
+  }
+  .icon-liebherr-sorting-grab-icon-rgb-64px:before {
+	content: "\e9d0";
+  }
+  .icon-liebherr-speed-icon-rgb-64px:before {
+	content: "\e9d1";
+  }
+  .icon-liebherr-stick-extension-icon-rgb-64px:before {
+	content: "\e9d2";
+  }
+  .icon-liebherr-sustainability-icon-rgb-64px:before {
+	content: "\e9d3";
+  }
+  .icon-liebherr-tiltrotator-icon-rgb-64px:before {
+	content: "\e9d4";
+  }
+  .icon-liebherr-transport-logistics-icon-rgb-64px:before {
+	content: "\e9d5";
+  }
+  .icon-liebherr-triangle-with-exclamation-mark-icon-rgb-64px:before {
+	content: "\e9d6";
+  }
+  .icon-liebherr-universal-bucket-wheel-loader-icon-rgb-64px:before {
+	content: "\e9d7";
+  }
+  .icon-liebherr-visits-to-doctor-during-working-hours-icon-rgb-64px:before {
+	content: "\e9d8";
+  }
+  .icon-liebherr-wash-your-hands-icon-rgb-64px:before {
+	content: "\e9d9";
+  }
+  .icon-liebherr-WDS-eldercare-icon-rgb-64px:before {
+	content: "\e9da";
+  }
+  .icon-liebherr-weight-icon-rgb-64px:before {
+	content: "\e9db";
+  }
+  .icon-liebherr-wind-energy-icon-rgb-64px:before {
+	content: "\e9dc";
+  }
+  .icon-liebherr-wood-grab-icon-rgb-64px:before {
+	content: "\e9dd";
+  }
+  .icon-liebherr-2-1-bucket-icon-rgb-64px:before {
+	content: "\e9de";
+  }
+  .icon-liebherr-4in1-bucket-icon-rgb-64px:before {
+	content: "\e9df";
+  }
+  .icon-liebherr-adapter-plate-icon-rgb-64px:before {
+	content: "\e9e0";
+  }
+  .icon-liebherr-AGG-Information-icon-rgb-64px:before {
+	content: "\e9e1";
+  }
+  .icon-liebherr-angle-90-degrees-icon-rgb-64px:before {
+	content: "\e9e2";
+  }
+  .icon-liebherr-app-launcher-icon-rgb-64px:before {
+	content: "\e9e3";
+  }
+  .icon-liebherr-battery-icon-rgb:before {
+	content: "\e9e4";
+  }
+  .icon-liebherr-BGM-Liebherr-icon-rgb-64px:before {
+	content: "\e9e5";
+  }
+  .icon-liebherr-boom-configurations-icon-rgb-64px:before {
+	content: "\e9e6";
+  }
+  .icon-liebherr-breakdown-icon-rgb-64px:before {
+	content: "\e9ee";
+  }
+  .icon-liebherr-break-regulations-normal-workers-icon-rgb-64px:before {
+	content: "\e9ef";
+  }
+  .icon-liebherr-break-regulations-shift-workers-icon-rgb-64px:before {
+	content: "\e9f0";
+  }
+  .icon-liebherr-bucket-icon-rgb-64px:before {
+	content: "\e9f1";
+  }
+  .icon-liebherr-bucket-telescopic-loader-icon-rgb-64px:before {
+	content: "\e9f2";
+  }
+  .icon-liebherr-care-concept-icon-rgb-64px:before {
+	content: "\e9f3";
+  }
+  .icon-liebherr-checklist_2-rgb-64px:before {
+	content: "\e9f4";
+  }
+  .icon-liebherr-children-sick-pay-icon-rgb-64px:before {
+	content: "\e9f5";
+  }
+  .icon-liebherr-civil-construction-icon-rgb-64px:before {
+	content: "\e9f6";
+  }
+  .icon-liebherr-clamshell-grab-icon-rgb-64px:before {
+	content: "\e9f7";
+  }
+  .icon-liebherr-commercial-education-icon-rgb-64px:before {
+	content: "\e9f8";
+  }
+  .icon-liebherr-control-assistance-systems-icon-rgb-64px:before {
+	content: "\e9f9";
+  }
+  .icon-liebherr-conveyor-belt-icon-rgb-64px:before {
+	content: "\e9fa";
+  }
+  .icon-liebherr-cooling-icon-rgb-64px:before {
+	content: "\e9fb";
+  }
+  .icon-liebherr-damage-icon-rgb-64px:before {
+	content: "\e9fc";
+  }
+  .icon-liebherr-data-exchange-icon-rgb-64px:before {
+	content: "\e9fd";
+  }
+  .icon-liebherr-deep-foundation-1-icon-rgb-64px:before {
+	content: "\e9fe";
+  }
+  .icon-liebherr-derrick-counterweight-icon-rgb-64px:before {
+	content: "\e9ff";
+  }
+  .icon-liebherr-double-gearwheel-icon-rgb-64px:before {
+	content: "\ea12";
+  }
+  .icon-liebherr-dozer-blade-icon-rgb-64px:before {
+	content: "\ea13";
+  }
+  .icon-liebherr-dump-height-at-max-lift-height-icon-rgb-64px:before {
+	content: "\ea14";
+  }
+  .icon-liebherr-environmental-damage-icon-rgb-64px:before {
+	content: "\ea15";
+  }
+  .icon-liebherr-family-business-icon-rgb-64px:before {
+	content: "\ea16";
+  }
+  .icon-liebherr-file-icon-rgb-64px:before {
+	content: "\ea17";
+  }
+  .icon-liebherr-folding-shovel-icon-rgb-64px:before {
+	content: "\ea19";
+  }
+  .icon-liebherr-forklift-icon-rgb-64px:before {
+	content: "\ea1a";
+  }
+  .icon-liebherr-fuel-savings-calculator-icon-rgb-64px:before {
+	content: "\ea1b";
+  }
+  .icon-liebherr-grab-bucket-telescopic-loader-icon-rgb-64px:before {
+	content: "\ea1c";
+  }
+  .icon-liebherr-grab-telescopic-loader-icon-rgb-64px:before {
+	content: "\ea1d";
+  }
+  .icon-liebherr-H2-icon-rgb-64px:before {
+	content: "\ea1e";
+  }
+  .icon-liebherr-hand-icon-rgb-64px:before {
+	content: "\ea1f";
+  }
+  .icon-liebherr-Hans-Liebherr-Hilfe-eV-icon-rgb-64px:before {
+	content: "\ea20";
+  }
+  .icon-liebherr-high-silo-icon-rgb-64px:before {
+	content: "\ea21";
+  }
+  .icon-liebherr-house-search-icon-rgb-64px:before {
+	content: "\ea22";
+  }
+  .icon-liebherr-hydraulic-manipulators-icon-rgb-64px:before {
+	content: "\ea23";
+  }
+  .icon-liebherr-hydraulic-power-unit-icon-rgb-64px:before {
+	content: "\ea24";
+  }
+  .icon-liebherr-light-material-bucket-wheel-loader-icon-rgb-64px:before {
+	content: "\ea25";
+  }
+  .icon-liebherr-LiTiU-icon-rgb-64px:before {
+	content: "\ea26";
+  }
+  .icon-liebherr-load-hook-icon-rgb-64px:before {
+	content: "\ea27";
+  }
+  .icon-liebherr-load-hook-telescopic-loader-icon-rgb-64px:before {
+	content: "\ea28";
+  }
+  .icon-liebherr-load-hook-wheel-loader-icon-rgb-64px:before {
+	content: "\ea29";
+  }
+  .icon-liebherr-log-grapple-wheel-loader-icon-rgb-64px:before {
+	content: "\ea2a";
+  }
+  .icon-liebherr-magnet-icon-rgb-64px:before {
+	content: "\ea2b";
+  }
+  .icon-liebherr-maternity-leave-process-icon-rgb-64px:before {
+	content: "\ea2c";
+  }
+  .icon-liebherr-maternity-protection-icon-rgb-64px:before {
+	content: "\ea2d";
+  }
+  .icon-liebherr-maximum-lifting-height-icon-rgb-64px:before {
+	content: "\ea2e";
+  }
+  .icon-liebherr-maximum-load-capacity-icon-rgb-64px:before {
+	content: "\ea2f";
+  }
+  .icon-liebherr-maximum-reach-icon-rgb-64px:before {
+	content: "\ea30";
+  }
+  .icon-liebherr-multi-tine-grab-icon-rgb-64px:before {
+	content: "\ea31";
+  }
+  .icon-liebherr-news_2-icon-rgb-64px:before {
+	content: "\ea32";
+  }
+  .icon-liebherr-pallet-fork-icon-rgb-64px:before {
+	content: "\ea33";
+  }
+  .icon-liebherr-pay-slip-specification-icon-rgb-64px:before {
+	content: "\ea34";
+  }
+  .icon-liebherr-petrochemical-icon-rgb-64px:before {
+	content: "\ea35";
+  }
+  .icon-liebherr-piston-accumulator-icon-rgb-64px:before {
+	content: "\ea36";
+  }
+  .icon-liebherr-port-floating-icon-rgb-64px:before {
+	content: "\ea37";
+  }
+  .icon-liebherr-power-plant-icon-rgb-64px:before {
+	content: "\ea38";
+  }
+  .icon-liebherr-quick-coupler-icon-rgb-64px:before {
+	content: "\ea39";
+  }
+  .icon-liebherr-quick-coupler-MH-icon-rgb-64px:before {
+	content: "\ea3a";
+  }
+  .icon-liebherr-quick-coupler-wheel-loader-icon-rgb-64px:before {
+	content: "\ea3b";
+  }
+  .icon-liebherr-recycle-icon-rgb-64px:before {
+	content: "\ea3c";
+  }
+  .icon-liebherr-recycle-with-text-icon-rgb-64px:before {
+	content: "\ea3d";
+  }
+  .icon-liebherr-reduce-icon-rgb-64px:before {
+	content: "\ea3e";
+  }
+  .icon-liebherr-reduce-with-text-icon-rgb-64px:before {
+	content: "\ea3f";
+  }
+  .icon-liebherr-reuse-icon-rgb-64px:before {
+	content: "\ea40";
+  }
+  .icon-liebherr-reuse-with-text-icon-rgb-64px:before {
+	content: "\ea41";
+  }
+  .icon-liebherr-rock-shovel-icon-rgb-64px:before {
+	content: "\ea42";
+  }
+  .icon-liebherr-invisible-icon-rgb-64px:before {
+	content: "\e906";
+  }
+  .icon-liebherr-target-group-icon-rgb-64px:before {
+	content: "\e9bd";
+  }
+  .icon-liebherr-projects-icon-rgb-64px:before {
+	content: "\e9ce";
+  }
+  .icon-liebherr-phone-icon-rgb-64px:before {
+	content: "\e9cf";
+  }
+  .icon-liebherr-virus-pathogen-icon-rgb-64px:before {
+	content: "\e999";
+  }
+  .icon-liebherr-visible-icon-rgb-64px:before {
+	content: "\e99a";
+  }
+  .icon-liebherr-volume-icon-rgb-64px:before {
+	content: "\e99d";
+  }
+  .icon-liebherr-volume-off-icon-rgb-64px:before {
+	content: "\e99e";
+  }
+  .icon-liebherr-workwear-icon-rgb-64px:before {
+	content: "\e99f";
+  }
+  .icon-liebherr-active-sourcing-icon-rgb-64px:before {
+	content: "\e9a9";
+  }
+  .icon-liebherr-billboard-icon-rgb-64px:before {
+	content: "\e9aa";
+  }
+  .icon-liebherr-booth-icon-rgb-64px:before {
+	content: "\e9ab";
+  }
+  .icon-liebherr-brain-icon-rgb-64px:before {
+	content: "\e9ac";
+  }
+  .icon-liebherr-brand-ambassador-icon-rgb-64px:before {
+	content: "\e9ad";
+  }
+  .icon-liebherr-care-icon-rgb-64px:before {
+	content: "\e9ae";
+  }
+  .icon-liebherr-chat-cell-phone-icon-rgb-64px:before {
+	content: "\e9af";
+  }
+  .icon-liebherr-classes-icon-rgb-64px:before {
+	content: "\e9b0";
+  }
+  .icon-liebherr-cloud-icon-rgb-64px:before {
+	content: "\e9b1";
+  }
+  .icon-liebherr-coolant-icon-rgb-64px:before {
+	content: "\e9b2";
+  }
+  .icon-liebherr-drone-icon-rgb-64px:before {
+	content: "\e9b3";
+  }
+  .icon-liebherr-e-learning-rgb-64px:before {
+	content: "\e9b4";
+  }
+  .icon-liebherr-employee-events-icon-rgb-64px:before {
+	content: "\e9b5";
+  }
+  .icon-liebherr-employer-funded-pension-icon-rgb-64px:before {
+	content: "\e9b6";
+  }
+  .icon-liebherr-favourites-icon-rgb-64px:before {
+	content: "\e9b7";
+  }
+  .icon-liebherr-film-icon-rgb-64px:before {
+	content: "\e9b8";
+  }
+  .icon-liebherr-flexible-working-hours-icon-rgb-64px:before {
+	content: "\e9b9";
+  }
+  .icon-liebherr-font-arrow-icon-rgb-64px:before {
+	content: "\e9ba";
+  }
+  .icon-liebherr-gifts-for-employees-icon-rgb-64px:before {
+	content: "\e9bb";
+  }
+  .icon-liebherr-inquiry-icon-rgb-64px:before {
+	content: "\e9bc";
+  }
+  .icon-liebherr-job-interview-icon-rgb-64px:before {
+	content: "\e9be";
+  }
+  .icon-liebherr-leisure-offers-icon-rgb-64px:before {
+	content: "\e9bf";
+  }
+  .icon-liebherr-licensing-software-icon-rgb-64px:before {
+	content: "\e9c0";
+  }
+  .icon-liebherr-medal-icon-rgb-64px:before {
+	content: "\e9c1";
+  }
+  .icon-liebherr-menu-icon-rgb-64px:before {
+	content: "\e9c2";
+  }
+  .icon-liebherr-my-notifier-icon-rgb-64px:before {
+	content: "\e9c3";
+  }
+  .icon-liebherr-pause-icon-rgb-64px:before {
+	content: "\e9c4";
+  }
+  .icon-liebherr-personnel-development-icon-rgb-64px:before {
+	content: "\e9c5";
+  }
+  .icon-liebherr-pharma-icon-rgb-64px:before {
+	content: "\e9c6";
+  }
+  .icon-liebherr-phone-charger-icon-rgb-64px:before {
+	content: "\e9c7";
+  }
+  .icon-liebherr-play-icon-rgb-64px:before {
+	content: "\e9c8";
+  }
+  .icon-liebherr-poster-icon-rgb-64px:before {
+	content: "\e9c9";
+  }
+  .icon-liebherr-radio-icon-rgb-64px:before {
+	content: "\e9ca";
+  }
+  .icon-liebherr-resource-friendly-icon-rgb-64px:before {
+	content: "\e9cb";
+  }
+  .icon-liebherr-settings-icon-rgb-64px:before {
+	content: "\e9cc";
+  }
+  .icon-liebherr-stop-icon-rgb-64px:before {
+	content: "\e9cd";
+  }
+  .icon-liebherr-instagram-icon-rgb-64px:before {
+	content: "\e993";
+  }
+  .icon-liebherr-kununu-icon-rgb-64px:before {
+	content: "\e994";
+  }
+  .icon-liebherr-linkedin-icon-rgb-64px:before {
+	content: "\e995";
+  }
+  .icon-liebherr-twitter-icon-rgb-64px:before {
+	content: "\e996";
+  }
+  .icon-liebherr-xing-icon-rgb-64px:before {
+	content: "\e997";
+  }
+  .icon-liebherr-facebook-icon-rgb-64px:before {
+	content: "\e998";
+  }
+  .icon-liebherr-smiley-positiv-icon-rgb-64px:before {
+	content: "\e907";
+  }
+  .icon-liebherr-special-leave-icon-rgb-64px:before {
+	content: "\e908";
+  }
+  .icon-liebherr-survey-icon-rgb-64px:before {
+	content: "\e909";
+  }
+  .icon-liebherr-thumbs-down-icon-rgb-64px:before {
+	content: "\e90a";
+  }
+  .icon-liebherr-thumbs-up-icon-rgb-64px:before {
+	content: "\e90b";
+  }
+  .icon-liebherr-apple-icon-rgb-64px:before {
+	content: "\e90c";
+  }
+  .icon-liebherr-application-icon-rgb-64px:before {
+	content: "\e90d";
+  }
+  .icon-liebherr-application-tips-icon-rgb-64px:before {
+	content: "\e90e";
+  }
+  .icon-liebherr-area-of-application-icon-rgb-64px:before {
+	content: "\e90f";
+  }
+  .icon-liebherr-carbon-fibre-reinforced-plastic-icon-rgb-64px:before {
+	content: "\e910";
+  }
+  .icon-liebherr-certificate-icon-rgb-64px:before {
+	content: "\e911";
+  }
+  .icon-liebherr-chat-icon-rgb-64px:before {
+	content: "\e912";
+  }
+  .icon-liebherr-checklist-icon-rgb-64px:before {
+	content: "\e913";
+  }
+  .icon-liebherr-contacts-icon-rgb-64px:before {
+	content: "\e914";
+  }
+  .icon-liebherr-data-security--icon-rgb-64px:before {
+	content: "\e915";
+  }
+  .icon-liebherr-digital-touch-icon-rgb-64px:before {
+	content: "\e916";
+  }
+  .icon-liebherr-document1-icon-rgb-64px:before {
+	content: "\e917";
+  }
+  .icon-liebherr-duplicate-icon-rgb-64px:before {
+	content: "\e918";
+  }
+  .icon-liebherr-eco-icon-rgb-64px:before {
+	content: "\e919";
+  }
+  .icon-liebherr-employees-icon-rgb-64px:before {
+	content: "\e91a";
+  }
+  .icon-liebherr-entry-level-icon-rgb-64px:before {
+	content: "\e91b";
+  }
+  .icon-liebherr-error-rework-icon-rgb-64px:before {
+	content: "\e91c";
+  }
+  .icon-liebherr-FAQ-icon-rgb-64px:before {
+	content: "\e91d";
+  }
+  .icon-liebherr-filter-reset-icon-rgb-64px:before {
+	content: "\e91e";
+  }
+  .icon-liebherr-further-education-funding-icon-rgb-64px:before {
+	content: "\e91f";
+  }
+  .icon-liebherr-google-icon-rgb-64px:before {
+	content: "\e920";
+  }
+  .icon-liebherr-images-icon-rgb-64px:before {
+	content: "\e921";
+  }
+  .icon-liebherr-inquiry-list-icon-rgb-64px:before {
+	content: "\e923";
+  }
+  .icon-liebherr-microsoft-icon-rgb-64px:before {
+	content: "\e924";
+  }
+  .icon-liebherr-offer-icon-rgb-64px:before {
+	content: "\e925";
+  }
+  .icon-liebherr-onboarding-icon-rgb-64px:before {
+	content: "\e926";
+  }
+  .icon-liebherr-online-marketing-icon-rgb-64px:before {
+	content: "\e927";
+  }
+  .icon-liebherr-products-icon-rgb-64px:before {
+	content: "\e928";
+  }
+  .icon-liebherr-quote-icon-rgb-64px:before {
+	content: "\e929";
+  }
+  .icon-liebherr-reliable-icon-rgb-64px:before {
+	content: "\e92a";
+  }
+  .icon-liebherr-scissors-icon-rgb-64px:before {
+	content: "\e92b";
+  }
+  .icon-liebherr-send-message-icon-rgb-64px:before {
+	content: "\e92c";
+  }
+  .icon-liebherr-smiley-negativ-icon-rgb-64px:before {
+	content: "\e92d";
+  }
+  .icon-liebherr-smiley-neutral-icon-rgb-64px:before {
+	content: "\e92e";
+  }
+  .icon-liebherr-arrow-down-icon-rgb-64px:before {
+	content: "\e92f";
+  }
+  .icon-liebherr-ballast-1-icon-rgb-64px:before {
+	content: "\e930";
+  }
+  .icon-liebherr-ballast-2-icon-rgb-64px:before {
+	content: "\e931";
+  }
+  .icon-liebherr-bin-icon-rgb-64px:before {
+	content: "\e932";
+  }
+  .icon-liebherr-calender-icon-rgb-64px:before {
+	content: "\e933";
+  }
+  .icon-liebherr-circle-arrow-right-icon-rgb-64px:before {
+	content: "\e934";
+  }
+  .icon-liebherr-common-rail-systems-icon-rgb-64px:before {
+	content: "\e935";
+  }
+  .icon-liebherr-concrete-pumps-icon-rgb-64px:before {
+	content: "\e936";
+  }
+  .icon-liebherr-concrete-pumps-icon-2-rgb-64px:before {
+	content: "\e937";
+  }
+  .icon-liebherr-concrete-technology-icon-rgb-64px:before {
+	content: "\e938";
+  }
+  .icon-liebherr-connected-components-icon-rgb-64px:before {
+	content: "\e939";
+  }
+  .icon-liebherr-control-technology-icon-rgb-64px:before {
+	content: "\e93a";
+  }
+  .icon-liebherr-crane-BOS-icon-rgb-64px:before {
+	content: "\e93b";
+  }
+  .icon-liebherr-crane-CBB-icon-rgb-64px:before {
+	content: "\e93c";
+  }
+  .icon-liebherr-crane-LHM-icon-rgb-64px:before {
+	content: "\e93d";
+  }
+  .icon-liebherr-crane-LRS-icon-rgb-64px:before {
+	content: "\e93e";
+  }
+  .icon-liebherr-crane-MCR-main-icon-rgb-64px:before {
+	content: "\e93f";
+  }
+  .icon-liebherr-crane-STS-icon-rgb-64px:before {
+	content: "\e940";
+  }
+  .icon-liebherr-crawler-crane-LWN-icon-rgb-64px:before {
+	content: "\e941";
+  }
+  .icon-liebherr-crawler-excavator-icon-rgb-64px:before {
+	content: "\e942";
+  }
+  .icon-liebherr-telescope-loader-icon-rgb-64px:before {
+	content: "\e943";
+  }
+  .icon-liebherr-deep-foundation-icon-rgb-64px:before {
+	content: "\e944";
+  }
+  .icon-liebherr-deep-foundation-icon-2-rgb-64px:before {
+	content: "\e945";
+  }
+  .icon-liebherr-document3-icon-rgb-64px:before {
+	content: "\e946";
+  }
+  .icon-liebherr-download-icon-rgb-64px:before {
+	content: "\e947";
+  }
+  .icon-liebherr-duty-cycle-crawler-crane-2-icon-rgb-64px:before {
+	content: "\e948";
+  }
+  .icon-liebherr-duty-cycle-crawler-crane-icon-rgb-64px:before {
+	content: "\e949";
+  }
+  .icon-liebherr-electric-machines-icon-rgb-64px:before {
+	content: "\e94a";
+  }
+  .icon-liebherr-electronics-icon-rgb-64px:before {
+	content: "\e94b";
+  }
+  .icon-liebherr-extra-jib-icon-rgb-64px:before {
+	content: "\e94c";
+  }
+  .icon-liebherr-fast-erecting-crane-icon-rgb-64px:before {
+	content: "\e94d";
+  }
+  .icon-liebherr-filter-adjust-icon-rgb-64px:before {
+	content: "\e94e";
+  }
+  .icon-liebherr-flat-top-crane-icon-rgb-64px:before {
+	content: "\e94f";
+  }
+  .icon-liebherr-gateway-icon-rgb-64px:before {
+	content: "\e950";
+  }
+  .icon-liebherr-gearboxes-icon-rgb-64px:before {
+	content: "\e951";
+  }
+  .icon-liebherr-generator-icon-rgb-64px:before {
+	content: "\e952";
+  }
+  .icon-liebherr-high-top-crane-icon-rgb-64px:before {
+	content: "\e953";
+  }
+  .icon-liebherr-hook-height-icon-rgb-64px:before {
+	content: "\e954";
+  }
+  .icon-liebherr-hydraulic-cylinders-icon-rgb-64px:before {
+	content: "\e955";
+  }
+  .icon-liebherr-hydraulic-fast-erecting-crane-icon-rgb-64px:before {
+	content: "\e956";
+  }
+  .icon-liebherr-hydraulic-pumps-motors-icon-rgb-64px:before {
+	content: "\e957";
+  }
+  .icon-liebherr-info-circle-icon-rgb-64px:before {
+	content: "\e958";
+  }
+  .icon-liebherr-info-icon-rgb-64px:before {
+	content: "\e959";
+  }
+  .icon-liebherr-large-diameter-bearings-icon-rgb-64px:before {
+	content: "\e95a";
+  }
+  .icon-liebherr-luffing-jib-crane-icon-rgb-64px:before {
+	content: "\e95b";
+  }
+  .icon-liebherr-material-handling-technology-icon-rgb-64px:before {
+	content: "\e95c";
+  }
+  .icon-liebherr-measuring-device-icon-rgb-64px:before {
+	content: "\e95d";
+  }
+  .icon-liebherr-mining-excavator-icon-rgb-64px:before {
+	content: "\e95e";
+  }
+  .icon-liebherr-mining-icon-rgb-64px:before {
+	content: "\e95f";
+  }
+  .icon-liebherr-mining-truck-icon-rgb-64px:before {
+	content: "\e960";
+  }
+  .icon-liebherr-mixing-plant-icon-2-rgb-64px:before {
+	content: "\e961";
+  }
+  .icon-liebherr-mixing-plant-icon-rgb-64px:before {
+	content: "\e962";
+  }
+  .icon-liebherr-mobile-construction-crane-icon-rgb-64px:before {
+	content: "\e963";
+  }
+  .icon-liebherr-mobile-crane-icon-rgb-64px:before {
+	content: "\e964";
+  }
+  .icon-liebherr-crawler-tractor-icon-rgb-64px:before {
+	content: "\e965";
+  }
+  .icon-liebherr-plus-icon-rgb-64px:before {
+	content: "\e966";
+  }
+  .icon-liebherr-printer-icon-rgb-64px:before {
+	content: "\e967";
+  }
+  .icon-liebherr-quality-icon-rgb-64px:before {
+	content: "\e968";
+  }
+  .icon-liebherr-reachstacker-icon-rgb-64px:before {
+	content: "\e969";
+  }
+  .icon-liebherr-rotation-icon-rgb-64px:before {
+	content: "\e96a";
+  }
+  .icon-liebherr-search-icon-rgb-64px:before {
+	content: "\e96b";
+  }
+  .icon-liebherr-shopping-cart-icon-rgb-64px:before {
+	content: "\e96c";
+  }
+  .icon-liebherr-system-drive-technology-icon-rgb-64px:before {
+	content: "\e96d";
+  }
+  .icon-liebherr-pipe-layer-icon-rgb-64px:before {
+	content: "\e96e";
+  }
+  .icon-liebherr-telescopic-jib-icon-rgb-64px:before {
+	content: "\e96f";
+  }
+  .icon-liebherr-user-icon-rgb-64px:before {
+	content: "\e970";
+  }
+  .icon-liebherr-warning-icon-rgb-64px:before {
+	content: "\e971";
+  }
+  .icon-liebherr-wheeled-excavator-icon-rgb-64px:before {
+	content: "\e972";
+  }
+  .icon-liebherr-service-menu-icon-rgb-64px:before {
+	content: "\e973";
+  }
+  .icon-liebherr-winches-icon-rgb-64px:before {
+	content: "\e974";
+  }
+  .icon-liebherr-tracking-icon-rgb-64px:before {
+	content: "\e975";
+  }
+  .icon-liebherr-history-icon-rgb-64px:before {
+	content: "\e976";
+  }
+  .icon-liebherr-upload-invitation-overview-icon-rgb-64px:before {
+	content: "\e977";
+  }
+  .icon-liebherr-upload-invitation-icon-rgb-64px:before {
+	content: "\e978";
+  }
+  .icon-liebherr-my-uploads-icon-rgb-64px:before {
+	content: "\e979";
+  }
+  .icon-liebherr-upload-icon-rgb-64px:before {
+	content: "\e97a";
+  }
+  .icon-liebherr-LPS-supplier-portal-icon-rgb-64px:before {
+	content: "\e97b";
+  }
+  .icon-liebherr-plane-icon-rgb-64px:before {
+	content: "\e97c";
+  }
+  .icon-liebherr-refrigeration-freezing-icon-rgb-64px:before {
+	content: "\e97d";
+  }
+  .icon-liebherr-service-icon-rgb-64px:before {
+	content: "\e97f";
+  }
+  .icon-liebherr-back-arrow-circle-icon-rgb-64px:before {
+	content: "\e980";
+  }
+  .icon-liebherr-checkmark-icon-rgb-64px:before {
+	content: "\e981";
+  }
+  .icon-liebherr-edit-icon-rgb-64px:before {
+	content: "\e982";
+  }
+  .icon-liebherr-aerospace-transportation-system-2-icon-rgb-64px:before {
+	content: "\e983";
+  }
+  .icon-liebherr-x-icon-rgb-64px:before {
+	content: "\e984";
+  }
+  .icon-liebherr-service-partner-icon-rgb-64px:before {
+	content: "\e985";
+  }
+  .icon-liebherr-unused-employee-potential-icon-rgb-64px:before {
+	content: "\e986";
+  }
+  .icon-liebherr-wheel-loader-big-icon-rgb-64px:before {
+	content: "\e987";
+  }
+  .icon-liebherr-wheel-loader-small-icon-rgb-64px:before {
+	content: "\e988";
+  }
+  .icon-liebherr-crawler-loader-icon-rgb-64px:before {
+	content: "\e989";
+  }
+  .icon-liebherr-envelope-icon-rgb-64px:before {
+	content: "\e98a";
+  }
+  .icon-liebherr-fax-icon-rgb-64px:before {
+	content: "\e98b";
+  }
+  .icon-liebherr-health-activities-icon-rgb-64px:before {
+	content: "\e98c";
+  }
+  .icon-liebherr-plane-take-off-icon-rgb-64px:before {
+	content: "\e98d";
+  }
+  .icon-liebherr-predictive-maintenance-icon-rgb-64px:before {
+	content: "\e98e";
+  }
+  .icon-liebherr-hotels-icon-rgb-64px:before {
+	content: "\e98f";
+  }
+  .icon-liebherr-order-details-icon-rgb-64px:before {
+	content: "\e990";
+  }
+  .icon-liebherr-product-catalog-icon-rgb-64px:before {
+	content: "\e991";
+  }
+  .icon-liebherr-product-documents-icon-rgb-64px:before {
+	content: "\e992";
+  }
+  .icon-liebherr-spare-parts-catalog-icon-rgb-64px:before {
+	content: "\e99c";
+  }
+  .icon-liebherr-aerospace-transportation-system-1-icon-rgb-64px:before {
+	content: "\e9a0";
+  }
+  .icon-liebherr-components-icon-rgb-64px:before {
+	content: "\e9a1";
+  }
+  .icon-liebherr-gear-cutting-technology-automation-icon-rgb-64px:before {
+	content: "\e9a2";
+  }
+  .icon-liebherr-star-black-icon-rgb-64px:before {
+	content: "\e9a3";
+  }
+  .icon-liebherr-star-icon-rgb-64px:before {
+	content: "\e9a4";
+  }
+  .icon-liebherr-youtube-icon-rgb-64px:before {
+	content: "\e9a5";
+  }
+  .icon-liebherr-save-icon-rgb-64px:before {
+	content: "\e9a6";
+  }
+  .icon-liebherr-team-icon-rgb-64px:before {
+	content: "\e9a7";
+  }
+  .icon-liebherr-webshop-icon-rgb-64px:before {
+	content: "\e9a8";
+  }
+  .icon-liebherr-camera-icon-rgb-64px:before {
+	content: "\eb2f";
+  }
+  .icon-liebherr-clock-icon-rgb-64px:before {
+	content: "\eb30";
+  }
+  .icon-liebherr-company-icon-rgb-64px:before {
+	content: "\eb4d";
+  }
+  .icon-liebherr-gearwheel-icon-rgb-64px:before {
+	content: "\eb4f";
+  }
+  .icon-liebherr-globe-icon-rgb-64px:before {
+	content: "\eb50";
+  }
+  .icon-liebherr-graduate-icon-rgb-64px:before {
+	content: "\eb51";
+  }

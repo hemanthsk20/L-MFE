@@ -1,0 +1,124 @@
+<header class="main-navigation-container" id="main_header">
+    <div class="main-navigation-grid">
+        <div class="main-navigation-grid-item">
+            <div class="main-nav-flex" align-items="center"
+                style="place-content: stretch flex-start; align-items: center; box-sizing: border-box; display: flex; flex-flow: row wrap; height: 100%; margin: 0px; padding: 0px; width: 100%;"
+                class="hydrated">
+                <div class="main-nav-flex-item"
+                    style="align-self: auto; box-sizing: border-box; flex: 0 1 auto; height: auto; margin: 0px; order: 0; padding: 0px; text-align: inherit; width: auto;"
+                    class="hydrated">
+                    <img src="../assets/img/logo.png" alt="Brand Logo" class="brand-logo" />
+
+                </div>
+            </div>
+        </div>
+        <div class="main-navigation-grid-item">
+            <h4>MyLiebherr</h4>
+        </div>
+        <div class="main-navigation-grid-item">
+
+        </div>
+        <div class="main-navigation-grid-item">
+            <ul>
+                <li class="textlink" (click)="showLanguaesOnClick()">
+                    <a class="current-language">English</a>
+                    <span class="icon-liebherr-globe-icon-rgb-64px"></span>
+                    <div class="flyoutmenu-container arrow-top" [style.display]="showLanguageMenu ? 'block' : 'none'">
+                        <a class="flyout-item">
+                            <div>English<span class="region"> (US)</span></div>
+                        </a>
+                        <a class="flyout-item">
+                            <div>German<span class="region"> (Deutsch)</span></div>
+                        </a>
+                        <a class="flyout-item">
+                            <div>French<span class="region"> (Français)</span></div>
+                        </a>
+                    </div>
+                </li>
+                <li><span class="icon-liebherr-info-circle-icon-rgb-64px"></span></li>
+                <li class="app-launcher-section" (click)="showAppLauncherOnClick()">
+                    <span class="icon-liebherr-app-launcher-icon-rgb-64px"></span>
+                    <div class="flyoutmenu-container" [style.display]="showAppLauncher ? 'block' : 'none'">
+                        <div class="flyoutmenu-wrapper arrow-top">
+                            <div class="flyoutmenu-content">
+                                <div class="app-launcher-heading">
+                                    <h4 class="sm:block text-h4 font-head mt-0 mb-6">My apps (10)</h4>
+                                    <hr class="horizontal-lines sm\:mr-4">
+                                </div>
+                                <div class="overflow-y-scroll">
+                                    <div class="flyoutmenu-app-wrapper">
+                                        <div class="p-1">
+                                            <a class="app-wrapper">
+                                                <span class="pt-3 icon-liebherr-home-icon-rgb-64px"></span>
+                                                <label class="app-label">Dashboard</label>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <hr class="horizontal-lines sm\:mr-5">
+                                    <div class="flyoutmenu-app-wrapper">
+                                        <div class="p-1">
+                                            <div class="app-wrapper">
+                                                <span class="pt-3 icon-liebherr-home-icon-rgb-64px"></span>
+                                                <label class="app-label">Dashboard</label>
+                                            </div>
+                                        </div>
+                                        <div class="p-1">
+                                            <div class="app-wrapper">
+                                                <span class="pt-3 icon-liebherr-home-icon-rgb-64px"></span>
+                                                <label class="app-label">Dashboard</label>
+                                            </div>
+                                        </div>
+                                        <div class="p-1">
+                                            <div class="app-wrapper">
+                                                <span class="pt-3 icon-liebherr-home-icon-rgb-64px"></span>
+                                                <label class="app-label">Dashboard</label>
+                                            </div>
+                                        </div>
+                                        <div class="p-1">
+                                            <div class="app-wrapper">
+                                                <span class="pt-3 icon-liebherr-home-icon-rgb-64px"></span>
+                                                <label class="app-label">Dashboard</label>
+                                            </div>
+                                        </div>
+                                        <div class="p-1">
+                                            <div class="app-wrapper">
+                                                <span class="pt-3 icon-liebherr-home-icon-rgb-64px"></span>
+                                                <label class="app-label">Dashboard</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="horizontal-lines sm\:mr-4">
+                                    </div>
+                                    <span class="action-section">
+                                        <a target="_blank">Action 1 </a>
+                                        <i class="icon-liebherr-circle-arrow-right-icon-rgb-64px"></i>
+                                   </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-liebherr-my-notifier-icon-rgb-64px"></span>
+                    <span class="notification-count">14</span>
+                </li>
+                <li class="flyoutmenu-relative-section">
+                    <a class="current-user" (click)="showUserMenuOnClick()">LB</a>
+                    <div class="flyoutmenu-container arrow-top" [style.display]="showFlyoutMenu ? 'block' : 'none'">
+                        <div class="flyoutmenu-user-section">
+                            <div class="flyoutmenu-avatar-container">
+                                <div class="flyoutmenu-current-avatar">LB</div> 
+                            </div>
+                            <div class="flyoutmenu-current-user-info-section">
+                                <span class="flyoutmenu-user-name">John Doe</span>
+                                <span class="flyoutmenu-user-info">Liebherr</span>
+                            </div>
+                        </div>
+                        <a class="flyout-item">option 1</a>
+                        <a class="flyout-item">option 1</a>
+                        <a class="flyout-item">option 1</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

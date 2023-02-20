@@ -1,0 +1,12 @@
+<!-- <ul class="breadcrumb">
+    <li *ngFor="let name of routeNames; let i = index">
+        <a routerLink="{{ routeValues[i] }}">{{ name }}</a>
+        <i class="icon-liebherr-arrow-right-icon-rgb-64px"></i>
+    </li>
+</ul> -->
+<div class="xng-breadcrumb">
+    <xng-breadcrumb [separator]="iconTemplate"></xng-breadcrumb>
+</div>
+<ng-template #iconTemplate>
+  <mat-icon>chevron_right</mat-icon>
+</ng-template>

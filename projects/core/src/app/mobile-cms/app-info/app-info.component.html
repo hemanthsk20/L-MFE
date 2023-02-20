@@ -1,0 +1,97 @@
+<div class="table-container">
+  <h1>Application List</h1>
+  <div class="grid-container">
+
+    <div class="grid-item">
+
+    </div>
+    <form class="grid-item">
+      <div class="searchbox">
+        <label></label>
+        <div class="searchbox-input-container">
+          <input class="searchbox-input-default" id="globalSearch"
+          (input)="onChange($event)" type="input" placeholder="Search">
+          <span class="searchbox-icon">
+            <i class="icon-liebherr-search-icon-rgb-64px"></i>
+          </span>
+        </div>
+      </div>
+    </form>
+    <div class="grid-item">
+      <button class="button button-primary" (click)="addNewApp()">
+        <span class="button-label" style="text-align: center;">Add New</span>
+      </button>
+    </div>
+  </div>
+  <ngx-table [configuration]="configuration" [data]="data" #table [columns]="columns" [pagination]="pagination">
+  </ngx-table>
+  <mat-paginator [length]="paginationTotalItems" [pageSize]="10" (page)="paginationEvent($event)">
+  </mat-paginator>
+</div>
+
+<ng-template #levelHeaderActionTemplate>
+  <div class="sorting-template">
+    <div class="level-template">
+      <label class="form-checkbox position">
+        <!-- <input
+          type="checkbox"
+          [checked]="selectedLevels.has('ASC')"
+          (change)="eventEmitted([{ key: 'name', order: 'asc' }], 1)"
+        /> 
+        <em class="form-icon"></em> -->
+        Sort Ascending
+      </label>
+      <label class="form-checkbox position">
+        <!-- <input
+          type="checkbox"
+          [checked]="selectedLevels.has('DESC')"
+          (change)="eventEmitted([{ key: 'name', order: 'desc' }], 1)"
+        /> 
+        <em class="form-icon"></em> -->
+        Sort Descending
+      </label>
+      <label class="form-checkbox position">
+        <!-- <input
+          type="checkbox"
+          [checked]="selectedLevels.has('RESET')"
+          (change)="eventEmitted([{ key: 'name', order: 'reset' }], 1)"
+        />
+        <em class="form-icon"></em>  -->
+        Reset
+      </label>
+      <!-- <label class="form-checkbox position"> Sort Ascending </label>
+      <label class="form-checkbox position"> Sort Descending </label>
+      <label class="form-checkbox position"> Reset </label> -->
+    </div>
+  </div>
+</ng-template>
+<!-- <ng-template #nameTpl let-row let-rowIndex="rowIndex">
+  <div *ngIf="editRow !== rowIndex">{{ row.name }}</div>
+  <div *ngIf="editRow === rowIndex">
+    <input type="text" #name placeholder="Name" class="form-label" [value]="row.name" />
+  </div>
+</ng-template> -->
+
+<ng-template #actionTpl let-row let-rowIndex="rowIndex">
+  <div class="cell-actions">
+    <i  class="icon-liebherr-edit-icon-rgb-64px" (click)="editAppById(row)"></i>
+    <i  class="icon-liebherr-bin-icon-rgb-64px" (click)="deleteApp(row)"></i>
+  </div>
+</ng-template>
+<!-- <ng-template #actionTpl1 let-row let-rowIndex="rowIndex">
+  <div class="cell-actions">
+    <i  class="icon-liebherr-bin-icon-rgb-64px"></i>
+    <i  class="icon-liebherr-bin-icon-rgb-64px" (click)="deleteApp()"></i>
+  </div>
+</ng-template> -->
+<!-- <ng-template #companyHeaderActionTemplate>
+  <div class="search-template">
+    <label for="filterHeaderSearch"> Search </label>
+    <input class="form-input" id="filterHeaderSearch" [value]="selectedCompany" (input)="filter('company', $event)"
+      type="search" placeholder="Search" />
+  </div>
+</ng-template> -->
+
+
+<!-- Remote Entry -->
+<!-- <app-data-table></app-data-table> -->
